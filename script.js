@@ -46,6 +46,7 @@ function clearNavHighlights() {
 
 // Checks the page position and calls highlightNavElement() based on this.
 function checkPagePosition() {
+  //Gives a number that turns negative once the top of the element passes the top of the viewport.
   const home = document.getElementById("home").getBoundingClientRect().top;
   const education = document.getElementById("education").getBoundingClientRect().top;
   const tech = document.getElementById("tech").getBoundingClientRect().top;
