@@ -34,21 +34,21 @@ nav {
 nav a {
   float: left;
   display: block;
-  color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+  margin: 9px 11px;
+  padding: 5px;
+  border: 3px solid #000;
+  border-radius: 12px;
   font-size: 17px;
 }
 
 nav a:hover {
-  background-color: #ddd;
-  color: black;
+  color: #1e688f;
 }
 
 nav a.active {
-  background-color: #4CAF50;
   color: white;
+  border-color: #1e688f
 }
 
 nav .navmenu {
@@ -56,7 +56,7 @@ nav .navmenu {
 }
 
 .name {
-  color: #C70039;
+  color: #c70039;
 }
 
 .more {
@@ -75,7 +75,6 @@ nav .navmenu {
 
 .more:hover {
   background-color: #1e688f;
-  color: white;
   border: 4px solid #1e688f;
 }
 
@@ -87,8 +86,9 @@ a:link, a:visited {
 .nav-container {
   position: sticky;
   top: 0;
-  background-color: #333;
+  background-color: #000;
   width: inherit;
+  border-bottom: 3px solid #c70039;
 }
 
 .container {
@@ -134,7 +134,7 @@ a:link, a:visited {
   position: absolute;
   background-position: center;
   object-fit: cover;
-  z-index: -1;
+  z-index: -2;
 }
 
 /* Media Queries */
