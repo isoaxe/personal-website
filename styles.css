@@ -2,7 +2,7 @@ html {
   scroll-behavior: smooth;
   font-family: 'Blinker', sans-serif;
   font-weight: 200;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 body {
@@ -100,15 +100,23 @@ a:link, a:visited {
 .title {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .tile {
   text-align: center;
-  display: inline-block;
-  background-color: #DC143C;
+  background-color: #9daba1;
+  margin: 5px;
   width: 32%;
-  margin-top: 40px;
-  letter-spacing: 0.1em;
+  min-width: 320px;
+  letter-spacing: 0.07em;
+  border-radius: 5px;
 }
 
 #home {
