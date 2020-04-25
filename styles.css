@@ -110,13 +110,45 @@ a:link, a:visited {
 }
 
 .tile {
-  text-align: center;
-  background-color: #9daba1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   margin: 5px;
+  padding: 10px 0px;
   width: 32%;
   min-width: 320px;
+  height: 250px;
   letter-spacing: 0.07em;
   border-radius: 5px;
+}
+
+.tile:hover {
+  border: 3px solid #1e688f;
+  background-color: #9daba1;
+}
+
+.tile img {
+  width: 100%;
+  text-align: center;
+  z-index: -1;
+}
+
+.tile:hover img {
+  display: none;
+}
+
+.tile div {
+  display: none;
+  left: 0;
+}
+
+.tile:hover div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  left: 300px;
 }
 
 #home {
@@ -185,4 +217,5 @@ a:link, a:visited {
     border-width: 2px;
     border-radius: 3px;
   }
+
 }
