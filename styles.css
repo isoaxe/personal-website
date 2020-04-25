@@ -114,6 +114,9 @@ a:link, a:visited {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
+  background-color: white;
+  overflow: hidden;
   margin: 5px;
   padding: 10px 0px;
   width: 32%;
@@ -126,21 +129,22 @@ a:link, a:visited {
 .tile:hover {
   border: 3px solid #1e688f;
   background-color: #9daba1;
+  transition: background-color 0.5s;
 }
 
 .tile img {
   width: 100%;
   text-align: center;
-  z-index: -1;
+  position: absolute;
 }
 
 .tile:hover img {
-  display: none;
+  opacity: 0%;
+  transition: opacity 0.5s;
 }
 
 .tile div {
   display: none;
-  left: 0;
 }
 
 .tile:hover div {
@@ -148,7 +152,19 @@ a:link, a:visited {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  left: 300px;
+  animation-name: slide-down;
+  animation-duration: 2s;
+}
+
+@keyframes slide-down {
+  from {
+    margin-top: 140%;
+    height: 300%;
+  }
+  to {
+    margin-top: 0%;
+    height: 100%;
+  }
 }
 
 #home {
