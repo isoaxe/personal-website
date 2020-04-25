@@ -75,6 +75,7 @@ nav .navmenu {
 
 .more:hover {
   background-color: #1e688f;
+  transition: background-color 0.2s;
   border: 4px solid #1e688f;
 }
 
@@ -89,6 +90,7 @@ a:link, a:visited {
   background-color: #000;
   width: inherit;
   border-bottom: 3px solid #c70039;
+  z-index: 1;
 }
 
 .container {
@@ -129,18 +131,17 @@ a:link, a:visited {
 .tile:hover {
   border: 3px solid #1e688f;
   background-color: #9daba1;
-  transition: background-color 0.5s;
+  transition: background-color 0.4s;
 }
 
 .tile img {
   width: 100%;
-  text-align: center;
   position: absolute;
 }
 
 .tile:hover img {
   opacity: 0%;
-  transition: opacity 0.5s;
+  transition: opacity 0.4s;
 }
 
 .tile div {
@@ -156,6 +157,13 @@ a:link, a:visited {
   animation-duration: 2s;
 }
 
+.tile:hover div img {
+  position: relative;
+  padding: 15px;
+  width: 15%;
+  opacity: 100%;
+}
+
 @keyframes slide-down {
   from {
     margin-top: 140%;
@@ -164,6 +172,15 @@ a:link, a:visited {
   to {
     margin-top: 0%;
     height: 100%;
+  }
+}
+
+@keyframes down-further {
+  from {
+
+  }
+  to {
+
   }
 }
 
