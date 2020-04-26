@@ -167,6 +167,11 @@ a:link, a:visited {
   opacity: 100%;
 }
 
+.tile:hover div img:hover {
+  width: 17%;
+  cursor: pointer;
+}
+
 @keyframes slide-down {
   from {
     margin-top: 200%;
