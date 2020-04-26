@@ -66,3 +66,26 @@ function checkPagePosition() {
 }
 
 window.onscroll = () => {checkPagePosition()};
+
+// Helper: Selects the tile that was clicked in order to modify.
+function lastPage(tileId) {
+  document.getElementById(tileId).style.animationName = "down-further";
+  document.getElementById(tileId).style.animationDuration = "2s";
+  document.getElementById(tileId).style.animationFillMode = "forwards";
+//  document.getElementById(tileId).onmouseout = () => {
+//    document.getElementById(tileId).style.animationName = "slide-down";
+//  }
+}
+
+function resetAnimation(tileId) {
+  document.getElementById(tileId).style.animationName = "slide-down";
+  console.log(tileId);
+}
+
+// Execute the lastPage() function for that tile when clicking on it.
+document.getElementById("0").onclick = () => lastPage(0);
+document.getElementById("test").onmouseleave = () => resetAnimation(0);
+//document.getElementById("1").onclick = () => lastPage(1);
+//document.getElementById("2").onclick = () => lastPage(2);
+//document.getElementById("3").onclick = () => lastPage(3);
+//document.getElementById("4").onclick = () => lastPage(4);
