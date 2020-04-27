@@ -122,7 +122,7 @@ a:link, a:visited {
   margin: 5px;
   padding: 10px 0px;
   width: 32%;
-  min-width: 320px;
+  min-width: 380px;
   height: 250px;
   letter-spacing: 0.07em;
   border-radius: 5px;
@@ -135,7 +135,8 @@ a:link, a:visited {
 }
 
 .tile img {
-  width: 100%;
+  max-width: 380px;
+  max-height: 250px;
   position: absolute;
 }
 
@@ -148,6 +149,10 @@ a:link, a:visited {
   display: none;
   height: 300%;
   padding: 10px;
+}
+
+.tile div h5 {
+  margin: 17px;
 }
 
 .tile:hover div {
@@ -174,19 +179,19 @@ a:link, a:visited {
 
 @keyframes slide-down {
   from {
-    margin-top: 200%;
+    margin-top: 210%;
   }
   to {
-    margin-top: 65%;
+    margin-top: 70%;
   }
 }
 
 @keyframes down-further {
   from {
-    margin-top: 65%;
+    margin-top: 70%;
   }
   to {
-    margin-top: -100%;
+    margin-top: -70%;
   }
 }
 

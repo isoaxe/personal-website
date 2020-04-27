@@ -76,13 +76,16 @@ function lastPage(tileId) {
 
 function resetAnimation(tileId) {
   document.getElementById(tileId).style.animationName = "slide-down";
-  console.log(tileId);
 }
 
 // Execute the lastPage() function for that tile when clicking on it.
 document.getElementById("0").onclick = () => lastPage(0);
 document.getElementsByClassName("tile")[0].onmouseleave = () => resetAnimation(0);
-//document.getElementById("1").onclick = () => lastPage(1);
-//document.getElementById("2").onclick = () => lastPage(2);
-//document.getElementById("3").onclick = () => lastPage(3);
-//document.getElementById("4").onclick = () => lastPage(4);
+document.getElementById("1").onclick = () => lastPage(1);
+document.getElementsByClassName("tile")[1].onmouseleave = () => resetAnimation(1);
+document.getElementById("2").onclick = () => lastPage(2);
+document.getElementsByClassName("tile")[2].onmouseleave = () => resetAnimation(2);
+document.getElementById("3").onclick = () => lastPage(3);
+document.getElementsByClassName("tile")[3].onmouseleave = () => resetAnimation(3);
+document.getElementById("4").onclick = () => lastPage(4);
+document.getElementsByClassName("tile")[4].onmouseleave = () => resetAnimation(4);
