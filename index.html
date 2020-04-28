@@ -109,7 +109,11 @@
     <!-- The Tech -->
     <section id="tech" class="container">
       <h2 class="title">- The Tech -</h2>
-      <img src="media/tech.jpg" class="container">
+      <picture>
+        <source media="(min-width: 801px)" srcset="media/tech.jpg">
+        <source media="(max-width: 800px)" srcset="media/tech-mobile.png">
+        <img src="media.tech.jpg">
+      </picture>
     </section>
 
     <!-- Projects -->
@@ -138,8 +142,6 @@
     <section id="contact" class="container">
       <h2 class="title">- Contact -</h2>
       <h5>Build a 'Contact Me' form here...</h5>
-      <p><a href="https://tudublin.ie/study/undergraduate/courses/structural-engineering-tu824/">Structural Engineering at TUD</a></p>
-      <h5>Does this show???</h5>
     </section>
   </body>
 </html>
