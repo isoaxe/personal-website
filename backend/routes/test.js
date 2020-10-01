@@ -8,4 +8,8 @@ router.get("/test", (req, res, next) => {
   res.send('Hello World');
 });
 
+router.get("/", (req, res, next) => {
+  res.sendFile(path.join(rootDir, "..", "index.html"));
+});
+
 module.exports = router;
