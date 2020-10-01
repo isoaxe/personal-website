@@ -9,7 +9,7 @@ router.get("/test", (req, res, next) => {
 });
 
 router.get("/", (req, res, next) => {
-  res.sendFile(path.join(rootDir, "..", "index.html"));
+  res.sendFile("index.html");
 });
 
 module.exports = router;
