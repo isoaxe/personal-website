@@ -59,7 +59,7 @@ nav .navmenu {
   color: #c70039;
 }
 
-.more {
+.button {
   margin: auto;
   width: 200px;
   height: 35px;
@@ -73,7 +73,7 @@ nav .navmenu {
   border-radius: 5px;
 }
 
-.more:hover {
+.button:hover {
   background-color: #1e688f;
   transition: background-color 0.2s;
   border: 4px solid #1e688f;
@@ -107,6 +107,27 @@ a:link, a:visited {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   text-align: center;
+}
+
+.contact-text {
+  color: #1e688f;
+}
+
+.contact-user {
+  max-width: 600px;
+  width: 100%;
+  height: 25px;
+  margin: 5px 30px;
+  font-size: 18px;
+}
+
+.contact-message {
+  max-width: 600px;
+  width: 100%;
+  height: 200px;
+  margin: 5px;
+  font-size: 18px;
+  font-family: 'Nunito', sans-serif;
 }
 
 .flex {
@@ -227,6 +248,7 @@ a:link, a:visited {
 #contact {
   color: #fff;
   background-color: #252934;
+  text-align: center;
 }
 
 #dynamic-background {
