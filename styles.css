@@ -59,7 +59,7 @@ nav .navmenu {
   color: #c70039;
 }
 
-.button {
+.more {
   margin: auto;
   width: 200px;
   height: 35px;
@@ -73,10 +73,29 @@ nav .navmenu {
   border-radius: 5px;
 }
 
-.button:hover {
+.more:hover {
   background-color: #1e688f;
   transition: background-color 0.2s;
   border: 4px solid #1e688f;
+}
+
+.submit {
+  margin: auto;
+  width: 90px;
+  height: 30px;
+  margin-top: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  text-align: center;
+  border: 3px solid #fff;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.submit:hover {
+  background-color: #1e688f;
+  transition: background-color 0.2s;
+  border: 2px solid #1e688f;
 }
 
 a:link, a:visited {
