@@ -3,7 +3,8 @@ const express = require('express');
 const path = require('path');
 
 const rootDir = require("./util/path");
-const testRoute = require("./routes/test");
+const homeRoute = require("./routes/home");
+const emailRoute = require("./routes/email");
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.use(bodyParser.urlencoded({extended: false}));
    the local node server (localhost:3000) */
 app.use('/', express.static(path.join(rootDir, "..")));
 
-app.use(testRoute);
+app.use(homeRoute);
+app.use(emailRoute);
 
 app.listen(3000);

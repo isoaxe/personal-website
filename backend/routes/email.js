@@ -1,10 +1,6 @@
-var nodemailer = require("nodemailer");
+const nodemailer = require("nodemailer");
 const express = require("express");
 const router = express.Router();
-
-router.get("/", (req, res, next) => {
-  res.sendFile("index.html");
-});
 
 router.post("/submit", (req, res, next) => {
   const transporter = nodemailer.createTransport({
