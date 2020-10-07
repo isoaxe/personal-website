@@ -79,19 +79,7 @@ function resetAnimation(tileId) {
 }
 
 // Execute the lastPage() function for that tile when clicking on it.
-document.getElementById("0").onclick = () => lastPage(0);
-document.getElementsByClassName("tile")[0].onmouseleave = () => resetAnimation(0);
-document.getElementById("1").onclick = () => lastPage(1);
-document.getElementsByClassName("tile")[1].onmouseleave = () => resetAnimation(1);
-document.getElementById("2").onclick = () => lastPage(2);
-document.getElementsByClassName("tile")[2].onmouseleave = () => resetAnimation(2);
-document.getElementById("3").onclick = () => lastPage(3);
-document.getElementsByClassName("tile")[3].onmouseleave = () => resetAnimation(3);
-document.getElementById("4").onclick = () => lastPage(4);
-document.getElementsByClassName("tile")[4].onmouseleave = () => resetAnimation(4);
-document.getElementById("5").onclick = () => lastPage(5);
-document.getElementsByClassName("tile")[5].onmouseleave = () => resetAnimation(5);
-document.getElementById("6").onclick = () => lastPage(6);
-document.getElementsByClassName("tile")[6].onmouseleave = () => resetAnimation(6);
-document.getElementById("7").onclick = () => lastPage(7);
-document.getElementsByClassName("tile")[7].onmouseleave = () => resetAnimation(7);
+for (let i = 0; i < 8; i++) {
+  document.getElementById(i).onclick = () => lastPage(i);
+  document.getElementsByClassName("tile")[i].onmouseleave = () => resetAnimation(i);
+}
