@@ -134,15 +134,15 @@ a:link, a:visited {
 
 .contact-user {
   max-width: 600px;
-  width: 100%;
+  width: 90%;
   height: 25px;
-  margin: 5px 30px;
+  margin: 5px;
   font-size: 18px;
 }
 
 .contact-message {
   max-width: 600px;
-  width: 100%;
+  width: 90%;
   height: 200px;
   margin: 5px;
   font-size: 18px;
