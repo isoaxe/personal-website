@@ -89,14 +89,14 @@ function validateForm() {
   const name = document.forms["contact"]["name"].value;
   const email = document.forms["contact"]["email"].value;
   const message = document.forms["contact"]["message"].value;
+
+  // Check each field for valid input.
   if (name === "") {
     document.getElementById("name").style.outline = "medium solid red";
-    document.getElementById("name").style.color = "red";
     document.getElementById("name").placeholder = "Please enter your name here";
   }
   if (email.indexOf('@') === -1) {
     document.getElementById("email").style.outline = "medium solid red";
-    document.getElementById("email").style.color = "red";
     document.getElementById("email").value = "";
     document.getElementById("email").placeholder = "Valid emails must contain an '@' symbol";
   }
@@ -105,9 +105,21 @@ function validateForm() {
   }
   if (message === "") {
     document.getElementById("message").style.outline = "medium solid red";
-    document.getElementById("message").style.color = "red";
     document.getElementById("message").placeholder = "Please enter your message here";
   }
+
+  // Remove red box around fields where valid input has been entered on next submission.
+  if (name !== "") {
+    document.getElementById("name").style.outline = 0;
+  }
+  if (email.indexOf('@') !== -1) {
+    document.getElementById("email").style.outline = 0;
+  }
+  if (message !== "") {
+    document.getElementById("message").style.outline = 0;
+  }
+
+  // If all fields pass, then return true so message can be sent.
   if (name !== "" && email.indexOf('@') !== -1 && message !== "") {
     return true;
   }
