@@ -163,10 +163,10 @@
       <div class="container">
         <h2 class="title">- Contact -</h2>
         <h4 class="contact-text">Questions? Send me a message below.</h4>
-        <form action="/submit" method="POST" name="contact">
-          <input class="contact-user" type="text" placeholder="Name" name="name"><br>
-          <input class="contact-user" type="text" placeholder="Email" name="email"><br>
-          <textarea class="contact-message" placeholder="Message" name="message"></textarea><br>
+        <form action="/submit" method="POST" onsubmit="return validateForm()" name="contact">
+          <input id="name" class="contact-user" type="text" placeholder="Name" name="name"><br>
+          <input id="email" class="contact-user" type="text" placeholder="Email" name="email"><br>
+          <textarea id="message" class="contact-message" placeholder="Message" name="message"></textarea><br>
           <button type="submit" class="submit">Submit</button>
         </form>
       </div>

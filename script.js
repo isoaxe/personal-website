@@ -83,3 +83,33 @@ for (let i = 0; i < 8; i++) {
   document.getElementById(i).onclick = () => lastPage(i);
   document.getElementsByClassName("tile")[i].onmouseleave = () => resetAnimation(i);
 }
+
+// Contact form validation of user input.
+function validateForm() {
+  const name = document.forms["contact"]["name"].value;
+  const email = document.forms["contact"]["email"].value;
+  const message = document.forms["contact"]["message"].value;
+  if (name === "") {
+    document.getElementById("name").style.outline = "medium solid red";
+    document.getElementById("name").style.color = "red";
+    document.getElementById("name").placeholder = "Please enter your name here";
+  }
+  if (email.indexOf('@') === -1) {
+    document.getElementById("email").style.outline = "medium solid red";
+    document.getElementById("email").style.color = "red";
+    document.getElementById("email").value = "";
+    document.getElementById("email").placeholder = "Valid emails must contain an '@' symbol";
+  }
+  if (email === "") {
+    document.getElementById("email").placeholder = "Please enter your email address here";
+  }
+  if (message === "") {
+    document.getElementById("message").style.outline = "medium solid red";
+    document.getElementById("message").style.color = "red";
+    document.getElementById("message").placeholder = "Please enter your message here";
+  }
+  if (name !== "" && email.indexOf('@') !== -1 && message !== "") {
+    return true;
+  }
+  return false;
+}
