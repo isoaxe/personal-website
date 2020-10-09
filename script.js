@@ -121,6 +121,7 @@ function validateForm() {
 
   // If all fields pass, then return true so message can be sent.
   if (name !== "" && email.indexOf('@') !== -1 && message !== "") {
+    alert('Message sent!');
     return true;
   }
   return false;
