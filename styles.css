@@ -314,6 +314,10 @@ a:link, a:visited {
     display: block;
     text-align: left;
   }
+
+  .submit {
+    width: auto;
+  }
 }
 
 @media screen and (max-width: 800px) {
