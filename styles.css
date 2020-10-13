@@ -300,9 +300,7 @@ a:link, a:visited {
     float: right;
     display: block;
   }
-}
 
-@media screen and (max-width: 600px) {
   .topnav.expand {position: relative;}
   .topnav.expand a.navmenu {
     position: absolute;
