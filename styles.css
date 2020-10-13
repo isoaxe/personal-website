@@ -81,7 +81,7 @@ nav .navmenu {
 
 .submit {
   margin: auto;
-  width: 90px;
+  width: auto;
   height: 30px;
   margin-top: 10px;
   font-family: "Montserrat", sans-serif;
@@ -313,10 +313,6 @@ a:link, a:visited {
     float: none;
     display: block;
     text-align: left;
-  }
-
-  .submit {
-    width: auto;
   }
 }
 
