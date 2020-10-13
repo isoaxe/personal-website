@@ -106,6 +106,7 @@ a:link, a:visited {
 
 .nav-container {
   position: sticky;
+  position: -webkit-sticky; /* for stickiness on mobile. */
   top: 0;
   background-color: #252934;
   width: inherit;
