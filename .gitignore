@@ -1,2 +1,8 @@
 .DS_Store
 node_modules
+
+#The following is from Namecheap:
+.htaccess
+.well-known/
+backend/tmp/
+nc_assets/
