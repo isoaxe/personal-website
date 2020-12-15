@@ -14,7 +14,7 @@ router.post("/submit", (req, res, next) => {
   const myEmail = {
     to: 'lucasoconnell4@gmail.com',
     subject: `A new message from ${req.body.name}`,
-    text: `${req.body.name} sent the following message:\n\n${req.body.message}`
+    text: `${req.body.name} sent the following message: \n\n ${req.body.message} \n\n Senders email: ${req.body.email}`
   };
 
   const sendersEmail = {
