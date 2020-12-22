@@ -7,7 +7,7 @@ router.post("/submit", (req, res, next) => {
     service: 'gmail',
     auth: {
       user: 'businessemailrouter@gmail.com',
-      pass: 'emailrouter47'
+      pass: 'bizmailrouter209'
     }
   });
 
