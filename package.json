@@ -5,7 +5,7 @@
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "jsx": "npx babel --watch src --out-dir . --presets react-app/prod"
+    "jsx": "npx babel --watch components --out-dir preprocessed --presets react-app/prod"
   },
   "repository": {
     "type": "git",
