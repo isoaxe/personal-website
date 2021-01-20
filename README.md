@@ -7,7 +7,7 @@ This is the codebase for my [personal website](https://www.lucasoconnell.net/). 
 
 The website was originally developed in HTML, CSS and vanilla JavaScript.
 
-When the 'contact' form was built, Node.js and Express.js were selected to handle middleware routing and other backend functions such as server creation and automatic generation of emails on form submission.
+When the contact form was built, Node.js and Express.js were selected to handle middleware routing and backend functions such as server creation and automatic generation of emails on form submission.
 
 Finally, React was [integrated gradually](https://reactjs.org/docs/add-react-to-a-website.html) and without a toolchain. This was done by loading react scripts along with any components in the existing HTML file. Components were written in JSX and then preprocessed by Babel via a [CLI script](https://github.com/Isoaxe/personal-website/blob/master/package.json) so that they would be readable by a browser. Several Node.js packages were used to add dynamism to the website in this way.
 
@@ -44,6 +44,4 @@ Install all of the Node dependencies for Express and other third party packages 
 
 ### `npm start`
 
-Spins up a local development server. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-The page will reload if you make edits to files in the backend folder.
-You will also see any lint errors in the console.
+Spins up a local development server. Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload if you make edits to files in the backend folder. You will also see any lint errors in the console.
