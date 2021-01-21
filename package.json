@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Isoaxe/personal-website#readme",
   "dependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-react-app": "^3.1.2"
+    "babel-preset-react-app": "^3.1.2",
+    "react-reveal": "^1.2.2"
   }
 }
