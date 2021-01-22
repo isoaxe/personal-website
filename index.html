@@ -45,6 +45,7 @@
         <div class="flex">
           <!-- Testing React component -->
           <div class="test-component-container" data-commentid="1"></div>
+          <div class="tile-container"></div>
           <div class="tile">
             <img src="media/logo-TUD.png">
             <div id="0">
@@ -175,11 +176,7 @@
       </div>
     </section>
 
-    <!-- Load React. -->
-    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
-    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-    <!-- Load our React component. -->
-    <script src="preprocessed/TestComponent/TestComponent.js"></script>
+    <!-- Load Browserified bundle containing all components. -->
+    <script src="bundle.js"></script>
   </body>
 </html>

@@ -1,9 +1,10 @@
-const useState = require('useState');
+const React = require('react');
+const ReactDOM = require('react-dom');
 'use strict';
 
 
 function LikeButton(props) {
-  const [liked, setLiked] = useState(false);
+  const [liked, setLiked] = React.useState(false);
 
   function likeState() {
     if (liked) {
