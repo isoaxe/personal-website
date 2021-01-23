@@ -9,7 +9,7 @@ The website was originally developed in HTML, CSS and vanilla JavaScript.
 
 When the contact form was built, Node.js and Express.js were selected to handle middleware routing and backend functions such as server creation and automatic generation of emails on form submission.
 
-Finally, React was [integrated gradually](https://reactjs.org/docs/add-react-to-a-website.html) and without a toolchain. This was done by loading react scripts along with any components in the existing HTML file. Components were written in JSX and then preprocessed by Babel via a [CLI script](https://github.com/Isoaxe/personal-website/blob/master/package.json) so that they would be readable by a browser. Several Node.js packages were used to add dynamism to the website in this way.
+Finally, React was [integrated gradually](https://reactjs.org/docs/add-react-to-a-website.html). Components were written in JSX and then preprocessed by Babel via a [CLI script](https://github.com/Isoaxe/personal-website/blob/master/package.json) so that they would be readable by a browser. Then Browserify was used to bundle the preprocessed components into a single file, which was in turn loaded via a `<script>` in the HTML file. This was necessary to run third party Node modules client-side.
 
 
 ## Local Setup
@@ -35,7 +35,7 @@ Hint: Hold ctrl-c a few seconds after running this command to resume control of 
 
 ### `npm install -g browserify`
 
-Install Browserify globally which bundles dependencies and allows us to `require('module')` from the browser as we do with Node. This allows the use of third-party Node modules that were unavailable via `<script>` import in the HTML file.
+Install Browserify globally which bundles dependencies and allows us to `require('module')` from the browser as we do with Node. This means that third-party Node modules can be used that were unavailable via `<script>` import in the HTML file.
 
 ### `npm run browserify`
 
@@ -54,7 +54,7 @@ Run the Watchify script in the package.json file. This monitors the preprocessed
 
 ### `cd backend`
 
-Navigate to the backend folder to set up the server.
+Navigate to the backend folder in a new terminal tab or window to set up the server.
 
 ### `npm install`
 
