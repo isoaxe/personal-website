@@ -8,25 +8,33 @@ const styled = require('styled-components');
 const styledTag = styled.default;
 const css = styled.css;
 
-
 function Tile() {
 
-  const width = '300px', height='150px';
   const Container = styledTag.div`
-    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     position: relative;
+    background-color: #fff;
     overflow: hidden;
-    width: ${width};
+    margin: 5px;
+    padding: 10px 0px;
+    width: 32%;
+    min-width: 380px;
+    letter-spacing: 0.07em;
+    border-radius: 5px;
   `;
-  const Children  = styledTag.div`
-    width: ${width};
+  const Children = styledTag.div`
+    text-align: center;
     position: relative;
-    height: ${height};
+    width: 90%;
+    height: 220px;
   `;
   const Arrow = styledTag.div`
     text-shadow: 1px 1px 1px #fff;
     z-index: 100;
-    line-height: ${height};
+    line-height: 220px;
     text-align: center;
     position: absolute;
     top: 0;
@@ -44,7 +52,7 @@ function Tile() {
   `;
   const Dots = styledTag.span`
     text-align: center;
-    width: ${width};
+    width: 100%;
     z-index: 100;
   `;
   const CarouselUI = ({ position, total, handleClick, children }) => (
