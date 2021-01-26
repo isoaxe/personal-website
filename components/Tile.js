@@ -9,6 +9,7 @@ const styledTag = styled.default;
 const css = styled.css;
 
 function Tile() {
+  const [hover, setHover] = React.useState(false);
 
   const Container = styledTag.div`
     display: flex;
@@ -55,6 +56,12 @@ function Tile() {
     width: 100%;
     z-index: 100;
   `;
+
+  function onHover() {
+    setHover(!hover);
+    console.log(hover);
+  }
+
   const CarouselUI = ({ position, total, handleClick, children }) => (
     <Container>
       <Children>
@@ -74,26 +81,28 @@ function Tile() {
   const Carousel = makeCarousel(CarouselUI);
 
   return (
-    <Carousel>
-      <Slide right>
-        <div>
-          <h1>Slide 1</h1>
-          <p>Slide Description</p>
-        </div>
-      </Slide>
-      <Slide right>
-        <div>
-          <h1>Slide 2</h1>
-          <p>Slide Description</p>
-        </div>
-      </Slide>
-      <Slide right>
-        <div>
-          <h1>Slide 3</h1>
-          <p>Slide Description</p>
-        </div>
-      </Slide>
-    </Carousel>
+    <div onMouseEnter={onHover} onMouseLeave={onHover}>
+      <Carousel>
+        <Slide right>
+          <div>
+            <h1>Slide 1</h1>
+            <p>Slide Description</p>
+          </div>
+        </Slide>
+        <Slide right>
+          <div>
+            <h1>Slide 2</h1>
+            <p>Slide Description</p>
+          </div>
+        </Slide>
+        <Slide right>
+          <div>
+            <h1>Slide 3</h1>
+            <p>Slide Description</p>
+          </div>
+        </Slide>
+      </Carousel>
+    </div>
   );
 }
 
