@@ -5,22 +5,25 @@ const Slide = require('react-reveal/Slide');
 const styled = require('styled-components');
 'use strict';
 
+const styledTag = styled.default;
+const css = styled.css;
+
 
 function Tile() {
 
   const width = '300px', height='150px';
-  const Container = styled.default.div`
+  const Container = styledTag.div`
     border: 1px solid red;
     position: relative;
     overflow: hidden;
     width: ${width};
   `;
-  const Children  = styled.default.div`
+  const Children  = styledTag.div`
     width: ${width};
     position: relative;
     height: ${height};
   `;
-  const Arrow = styled.default.div`
+  const Arrow = styledTag.div`
     text-shadow: 1px 1px 1px #fff;
     z-index: 100;
     line-height: ${height};
@@ -31,15 +34,15 @@ function Tile() {
     font-size: 3em;
     cursor: pointer;
     user-select: none;
-    ${props => props.right ? styled.css`left: 90%;` : styled.css`left: 0%;`}
+    ${props => props.right ? css`left: 90%;` : css`left: 0%;`}
   `;
-  const Dot = styled.default.span`
+  const Dot = styledTag.span`
     font-size: 1.5em;
     cursor: pointer;
     text-shadow: 1px 1px 1px #fff;
     user-select: none;
   `;
-  const Dots = styled.default.span`
+  const Dots = styledTag.span`
     text-align: center;
     width: ${width};
     z-index: 100;
