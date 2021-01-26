@@ -8,6 +8,7 @@ const styled = require('styled-components');
 const styledTag = styled.default;
 const css = styled.css;
 
+
 function Tile() {
   const [hover, setHover] = React.useState(false);
 
@@ -25,6 +26,8 @@ function Tile() {
     min-width: 380px;
     letter-spacing: 0.07em;
     border-radius: 5px;
+    ${props => props.hover ? css`border: 3px solid #1e688f;` : css`border: none;`}
+    ${props => props.hover ? css`background-color: #9daba1;` : css`background-color: #fff;`}
   `;
   const Children = styledTag.div`
     text-align: center;
@@ -57,13 +60,8 @@ function Tile() {
     z-index: 100;
   `;
 
-  function onHover() {
-    setHover(!hover);
-    console.log(hover);
-  }
-
   const CarouselUI = ({ position, total, handleClick, children }) => (
-    <Container>
+    <Container hover={hover}>
       <Children>
         {children}
         <Arrow onClick={handleClick} data-position={position - 1}>{'<'}</Arrow>
@@ -81,7 +79,7 @@ function Tile() {
   const Carousel = makeCarousel(CarouselUI);
 
   return (
-    <div onMouseEnter={onHover} onMouseLeave={onHover}>
+    <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
       <Carousel>
         <Slide right>
           <div>
