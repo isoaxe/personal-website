@@ -33,9 +33,9 @@ function Tile() {
     text-align: center;
     position: relative;
     width: 90%;
-    height: 220px;
+    height: 250px;
   `;
-  const Arrow = styledTag.div`
+  const ArrowTemp = styledTag.div`
     text-shadow: 1px 1px 1px #fff;
     z-index: 100;
     line-height: 220px;
@@ -48,13 +48,27 @@ function Tile() {
     user-select: none;
     ${props => props.right ? css`left: 90%;` : css`left: 0%;`}
   `;
+  const ArrowContainer = styledTag.div`
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+  `
+  const ArrowImg = styledTag.img`
+    position: relative;
+    padding: 10px;
+    width: 15%;
+  `
+
 
   const CarouselUI = ({ position, total, handleClick, children }) => (
     <Container hover={hover}>
       <Children>
         {children}
-        <Arrow onClick={handleClick} data-position={position - 1}>{'<'}</Arrow>
-        <Arrow right onClick={handleClick} data-position={position + 1}>{'>'}</Arrow>
+        <ArrowTemp onClick={handleClick} data-position={position - 1}>{'<'}</ArrowTemp>
+        <ArrowTemp right onClick={handleClick} data-position={position + 1}>{'>'}</ArrowTemp>
+        <ArrowContainer><ArrowImg src='media/down-arrow.png' /></ArrowContainer>
       </Children>
     </Container>
   );
