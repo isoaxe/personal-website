@@ -57,8 +57,10 @@ function Tile() {
   `
   const ArrowImg = styledTag.img`
     position: relative;
+    cursor: pointer;
     padding: 10px;
     width: 15%;
+    z-index: 2;
   `
 
 
@@ -68,7 +70,7 @@ function Tile() {
         {children}
         <ArrowTemp onClick={handleClick} data-position={position - 1}>{'<'}</ArrowTemp>
         <ArrowTemp right onClick={handleClick} data-position={position + 1}>{'>'}</ArrowTemp>
-        <ArrowContainer><ArrowImg src='media/down-arrow.png' /></ArrowContainer>
+        <ArrowContainer><ArrowImg src='media/down-arrow.png' onClick={handleClick} data-position={position + 1} /></ArrowContainer>
       </Children>
     </Container>
   );
