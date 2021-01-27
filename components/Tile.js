@@ -1,7 +1,7 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 const makeCarousel = require('react-reveal/makeCarousel');
-const Slide = require('react-reveal/Slide');
+const Bounce = require('react-reveal/Bounce');
 const styled = require('styled-components');
 'use strict';
 
@@ -50,7 +50,6 @@ function Tile() {
     z-index: 2;
   `
 
-
   const CarouselUI = ({ position, total, handleClick, children }) => (
     <Container hover={hover}>
       <Children>
@@ -64,24 +63,24 @@ function Tile() {
   return (
     <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
       <Carousel>
-        <Slide right>
+        <Bounce bottom>
           <div>
             <h1>Slide 1</h1>
             <p>Slide Description</p>
           </div>
-        </Slide>
-        <Slide right>
+        </Bounce>
+        <Bounce bottom>
           <div>
             <h1>Slide 2</h1>
             <p>Slide Description</p>
           </div>
-        </Slide>
-        <Slide right>
+        </Bounce>
+        <Bounce bottom>
           <div>
             <h1>Slide 3</h1>
             <p>Slide Description</p>
           </div>
-        </Slide>
+        </Bounce>
       </Carousel>
     </div>
   );
