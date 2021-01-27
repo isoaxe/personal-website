@@ -35,19 +35,6 @@ function Tile() {
     width: 90%;
     height: 250px;
   `;
-  const ArrowTemp = styledTag.div`
-    text-shadow: 1px 1px 1px #fff;
-    z-index: 100;
-    line-height: 220px;
-    text-align: center;
-    position: absolute;
-    top: 0;
-    width: 10%;
-    font-size: 3em;
-    cursor: pointer;
-    user-select: none;
-    ${props => props.right ? css`left: 90%;` : css`left: 0%;`}
-  `;
   const ArrowContainer = styledTag.div`
     display: flex;
     justify-content: flex-end;
@@ -68,8 +55,6 @@ function Tile() {
     <Container hover={hover}>
       <Children>
         {children}
-        <ArrowTemp onClick={handleClick} data-position={position - 1}>{'<'}</ArrowTemp>
-        <ArrowTemp right onClick={handleClick} data-position={position + 1}>{'>'}</ArrowTemp>
         <ArrowContainer><ArrowImg src='media/down-arrow.png' onClick={handleClick} data-position={position + 1} /></ArrowContainer>
       </Children>
     </Container>
