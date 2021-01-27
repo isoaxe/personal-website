@@ -48,17 +48,6 @@ function Tile() {
     user-select: none;
     ${props => props.right ? css`left: 90%;` : css`left: 0%;`}
   `;
-  const Dot = styledTag.span`
-    font-size: 1.5em;
-    cursor: pointer;
-    text-shadow: 1px 1px 1px #fff;
-    user-select: none;
-  `;
-  const Dots = styledTag.span`
-    text-align: center;
-    width: 100%;
-    z-index: 100;
-  `;
 
   const CarouselUI = ({ position, total, handleClick, children }) => (
     <Container hover={hover}>
@@ -67,13 +56,6 @@ function Tile() {
         <Arrow onClick={handleClick} data-position={position - 1}>{'<'}</Arrow>
         <Arrow right onClick={handleClick} data-position={position + 1}>{'>'}</Arrow>
       </Children>
-      <Dots>
-        {Array(...Array(total)).map( (val, index) =>
-          <Dot key={index} onClick={handleClick} data-position={index}>
-            {index === position ? '● ' : '○ ' }
-          </Dot>
-        )}
-      </Dots>
     </Container>
   );
   const Carousel = makeCarousel(CarouselUI);
