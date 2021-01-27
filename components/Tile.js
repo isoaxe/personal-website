@@ -63,19 +63,19 @@ function Tile() {
   return (
     <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
       <Carousel>
-        <Bounce bottom>
+        <Bounce bottom wait={3600000}>
           <div>
             <h1>Slide 1</h1>
             <p>Slide Description</p>
           </div>
         </Bounce>
-        <Bounce bottom>
+        <Bounce bottom wait={3600000}>
           <div>
             <h1>Slide 2</h1>
             <p>Slide Description</p>
           </div>
         </Bounce>
-        <Bounce bottom>
+        <Bounce bottom wait={3600000}>
           <div>
             <h1>Slide 3</h1>
             <p>Slide Description</p>
