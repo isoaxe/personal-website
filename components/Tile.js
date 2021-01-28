@@ -9,7 +9,7 @@ const styledTag = styled.default;
 const css = styled.css;
 
 
-function Tile() {
+function Tile(props) {
   const [hover, setHover] = React.useState(false);
 
   const Container = styledTag.div`
@@ -60,8 +60,7 @@ function Tile() {
       <Carousel>
         <Bounce bottom wait={3600000}>
           <div>
-            <h1>Slide 1</h1>
-            <p>Slide Description</p>
+            <img src={props.image} />
           </div>
         </Bounce>
         <Bounce bottom wait={3600000}>
@@ -84,5 +83,6 @@ function Tile() {
 // Find all DOM containers, and render Like buttons into them.
 document.querySelectorAll('.tile-container')
   .forEach(domContainer => {
-    ReactDOM.render(<Tile />, domContainer);
+    const image = domContainer.dataset.image;
+    ReactDOM.render(<Tile image={image} />, domContainer);
   });
