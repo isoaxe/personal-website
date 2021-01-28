@@ -44,12 +44,13 @@ function Tile() {
     padding: 10px;
     width: 15%;
     z-index: 2;
+    ${props => props.hover ? css`visibility: visible;` : css`visibility: hidden;`}
   `
 
   const CarouselUI = ({ position, total, handleClick, children }) => (
     <Container hover={hover}>
       {children}
-      <ArrowContainer><ArrowImg src='media/down-arrow.png' onClick={handleClick} data-position={position + 1} /></ArrowContainer>
+      <ArrowContainer><ArrowImg src='media/down-arrow.png' onClick={handleClick} data-position={position + 1} hover={hover} /></ArrowContainer>
     </Container>
   );
   const Carousel = makeCarousel(CarouselUI);
