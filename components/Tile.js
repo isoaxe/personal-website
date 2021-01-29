@@ -49,6 +49,9 @@ function Tile(props) {
     z-index: 2;
     ${props => props.hover ? css`visibility: visible;` : css`visibility: hidden;`}
   `
+  const slide3Style = {
+    margin: '0px 10px'
+  }
 
   const CarouselUI = ({ position, total, handleClick, children }) => (
     <Container hover={hover}>
@@ -71,7 +74,7 @@ function Tile(props) {
           </div>
         </Bounce>
         <Bounce bottom wait={3600000}>
-          <div dangerouslySetInnerHTML={{__html: tileSelector(id, 3)}}>
+          <div dangerouslySetInnerHTML={{__html: tileSelector(id, 3)}} style={slide3Style}>
           </div>
         </Bounce>
       </Carousel>
