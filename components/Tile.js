@@ -49,8 +49,6 @@ function Tile(props) {
     z-index: 2;
     ${props => props.hover ? css`visibility: visible;` : css`visibility: hidden;`}
   `
-  const slide2 = `<h1>Slide 2</h1>
-                  <p>Slide Description</p>`;
 
   const CarouselUI = ({ position, total, handleClick, children }) => (
     <Container hover={hover}>
@@ -69,13 +67,11 @@ function Tile(props) {
           </div>
         </Bounce>
         <Bounce bottom wait={3600000}>
-          <div dangerouslySetInnerHTML={{__html: slide2}}>
+          <div dangerouslySetInnerHTML={{__html: tileSelector(id, 2)}}>
           </div>
         </Bounce>
         <Bounce bottom wait={3600000}>
-          <div>
-            <h1>Slide 3</h1>
-            <p>Slide Description</p>
+          <div dangerouslySetInnerHTML={{__html: tileSelector(id, 3)}}>
           </div>
         </Bounce>
       </Carousel>
