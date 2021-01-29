@@ -31,7 +31,7 @@ function Tile(props) {
     border-radius: 5px;
     text-align: center;
     height: 250px;
-    ${props => props.hover ? css`border: 3px solid #1e688f;` : css`border: none;`}
+    ${props => props.hover ? css`border: 3px solid #1e688f;` : css`border: 3px solid #fff;`}
     ${props => props.hover ? css`background-color: #9daba1;` : css`background-color: #fff;`}
   `;
   const ArrowContainer = styledTag.div`
