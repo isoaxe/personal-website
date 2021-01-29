@@ -293,6 +293,10 @@ a:link, a:visited {
   z-index: -2;
 }
 
+#slide3 p {
+  font-size: 16px;
+}
+
 /* Media Queries */
 
 @media screen and (max-width: 600px) {
