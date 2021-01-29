@@ -115,6 +115,10 @@ a:link, a:visited {
   z-index: 1;
 }
 
+.tile-container {
+  z-index: 0;
+}
+
 .container {
   max-width: 1200px;
   margin: auto;
