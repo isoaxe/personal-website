@@ -79,9 +79,9 @@ function resetAnimation(tileId) {
 }
 
 // Execute the lastPage() function for that tile when clicking on it.
-for (let i = 0; i < 8; i++) {
+for (let i = 5; i < 8; i++) {
   document.getElementById(i).onclick = () => lastPage(i);
-  document.getElementsByClassName("tile")[i].onmouseleave = () => resetAnimation(i);
+  document.getElementsByClassName("tile")[i-5].onmouseleave = () => resetAnimation(i);
 }
 
 // Contact form validation of user input.
