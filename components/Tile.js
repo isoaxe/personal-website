@@ -5,12 +5,15 @@ const Bounce = require('react-reveal/Bounce');
 const styled = require('styled-components');
 'use strict';
 
+const tileSelector = require('../util/tileSelector.js');
+
 const styledTag = styled.default;
 const css = styled.css;
 
 
 function Tile(props) {
   const [hover, setHover] = React.useState(false);
+  const id = Number(props.id);
 
   const Container = styledTag.div`
     display: flex;
@@ -62,7 +65,7 @@ function Tile(props) {
       <Carousel>
         <Bounce bottom wait={3600000}>
           <div>
-            <img src={props.image} />
+            <img src={tileSelector(id, 1)} />
           </div>
         </Bounce>
         <Bounce bottom wait={3600000}>
@@ -83,6 +86,6 @@ function Tile(props) {
 // Find all DOM containers, and render Like buttons into them.
 document.querySelectorAll('.tile-container')
   .forEach(domContainer => {
-    const image = domContainer.dataset.image;
-    ReactDOM.render(<Tile image={image} />, domContainer);
+    const id = domContainer.dataset.id;
+    ReactDOM.render(<Tile id={id} />, domContainer);
   });
