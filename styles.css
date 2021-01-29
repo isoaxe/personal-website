@@ -239,6 +239,12 @@ a:link, a:visited {
   cursor: pointer;
 }
 
+.slide3 p {
+  font-weight: 400;
+  font-size: 16px;
+  margin: 15px 10px;
+}
+
 @keyframes slide-down {
   from {
     margin-top: 185%;
@@ -297,11 +303,6 @@ a:link, a:visited {
   z-index: -2;
 }
 
-#slide3 p {
-  font-weight: 400;
-  font-size: 16px;
-  margin: 15px 10px;
-}
 
 /* Media Queries */
 

@@ -71,7 +71,7 @@ function Tile(props) {
           </div>
         </Bounce>
         <Bounce bottom wait={3600000}>
-          <div dangerouslySetInnerHTML={{__html: tileSelector(id, 3)}} id='slide3'>
+          <div dangerouslySetInnerHTML={{__html: tileSelector(id, 3)}} className='slide3'>
           </div>
         </Bounce>
       </Carousel>
