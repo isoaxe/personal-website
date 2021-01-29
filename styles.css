@@ -239,6 +239,18 @@ a:link, a:visited {
   cursor: pointer;
 }
 
+.coverLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+}
+
+.coverLogo img {
+  max-width: 380px;
+  max-height: 250px;
+}
+
 .slide3 p {
   font-weight: 400;
   font-size: 16px;

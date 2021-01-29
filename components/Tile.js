@@ -62,7 +62,7 @@ function Tile(props) {
     <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
       <Carousel>
         <Bounce bottom wait={3600000}>
-          <div>
+          <div className='coverLogo'>
             <img src={tileSelector(id, 1)} />
           </div>
         </Bounce>
