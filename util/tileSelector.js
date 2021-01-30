@@ -5,7 +5,7 @@ module.exports = function tileSelector(id, slide) {
         return 'media/logo-TUD.png'
       } else if (slide == 2) {
         return `
-        <p><a href="https://tudublin.ie/study/undergraduate/courses/structural-engineering-tu824/" target="_blank">BEng in Structural Engineering</a></p>
+        <p class='slideLink'><a href="https://tudublin.ie/study/undergraduate/courses/structural-engineering-tu824/" target="_blank">BEng in Structural Engineering</a></p>
         <h5>Technological University Dublin</h5>
         <h5>4 Years</h5>
         <h5>Complete</h5>
@@ -21,7 +21,7 @@ module.exports = function tileSelector(id, slide) {
         return 'media/logo-UBC.png'
       } else if (slide == 2) {
         return `
-        <p><a href="https://www.edx.org/micromasters/software-development" target="_blank">Software Development MicroMasters</a></p>
+        <p class='slideLink'><a href="https://www.edx.org/micromasters/software-development" target="_blank">Software Development MicroMasters</a></p>
         <h5>University of British Columbia</h5>
         <h5>500 Hours</h5>
         <h5>35% Complete</h5>
@@ -39,7 +39,7 @@ module.exports = function tileSelector(id, slide) {
         return 'media/logo-OSSU.png'
       } else if (slide == 2) {
         return `
-        <p><a href="https://github.com/ossu/computer-science" target="_blank">OSSU CS Undergraduate</a></p>
+        <p class='slideLink'><a href="https://github.com/ossu/computer-science" target="_blank">OSSU CS Undergraduate</a></p>
         <h5>Various Universities</h5>
         <h5>3,000 Hours</h5>
         <h5>10% Complete</h5>
@@ -74,7 +74,7 @@ module.exports = function tileSelector(id, slide) {
         return 'media/logo-GT.png'
       } else if (slide == 2) {
         return `
-        <p><a href="http://www.omscs.gatech.edu/" target="_blank">MSc in Computer Science</a></p>
+        <p class='slideLink'><a href="http://www.omscs.gatech.edu/" target="_blank">MSc in Computer Science</a></p>
         <h5>Georgia Tech</h5>
         <h5>2 Years</h5>
         <h5>Planned</h5>

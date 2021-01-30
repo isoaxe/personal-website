@@ -257,6 +257,10 @@ a:link, a:visited {
   margin: 15px 10px;
 }
 
+.slideLink a:hover {
+  color: #1e688f;
+}
+
 @keyframes slide-down {
   from {
     margin-top: 185%;
