@@ -162,83 +162,6 @@ a:link, a:visited {
   font-family: 'Nunito', sans-serif;
 }
 
-.tile {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
-  background-color: #fff;
-  overflow: hidden;
-  margin: 5px;
-  padding: 10px 0px;
-  width: 32%;
-  min-width: 380px;
-  height: 250px;
-  letter-spacing: 0.07em;
-  border-radius: 5px;
-}
-
-.tile:hover {
-  border: 3px solid #1e688f;
-  background-color: #9daba1;
-  transition: background-color 0.4s;
-}
-
-.tile img {
-  max-width: 380px;
-  max-height: 250px;
-  position: absolute;
-}
-
-.tile:hover img {
-  opacity: 0%;
-  transition: opacity 0.4s;
-}
-
-.tile div {
-  display: none;
-  height: 300%;
-  padding: 10px;
-}
-
-.tile div h5 {
-  margin: 17px;
-}
-
-.tile div p, a {
-  font-weight: 400;
-  font-size: 16px;
-  text-align: center;
-  z-index: 0;
-}
-
-.tile div a:hover {
-  color: #1e688f;
-}
-
-.tile:hover div {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: column;
-  animation-name: slide-down;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-}
-
-.tile:hover div img {
-  position: relative;
-  padding: 15px;
-  width: 15%;
-  opacity: 100%;
-}
-
-.tile:hover div img:hover {
-  width: 17%;
-  cursor: pointer;
-}
-
 .coverLogo {
   display: flex;
   justify-content: center;
@@ -259,24 +182,6 @@ a:link, a:visited {
 
 .slideLink a:hover {
   color: #1e688f;
-}
-
-@keyframes slide-down {
-  from {
-    margin-top: 185%;
-  }
-  to {
-    margin-top: 65%;
-  }
-}
-
-@keyframes down-further {
-  from {
-    margin-top: 65%;
-  }
-  to {
-    margin-top: -75%;
-  }
 }
 
 #tech picture source, img {
