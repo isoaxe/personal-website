@@ -85,5 +85,48 @@ module.exports = function tileSelector(id, slide) {
         `
       }
       break;
+    case 5:
+      if (slide == 1) {
+        return 'media/space-invaders.png'
+      } else if (slide == 2) {
+        return `
+        <h5>Space Invaders</h5>
+        <h5>Programmed in Racket</h5>
+        <p class='slideLink'><a href="https://github.com/Isoaxe/space-invaders" target="_blank">GitHub</a></p>
+        <p class='slideLink'><a href="https://youtu.be/DLwNWz1fDoU" target="_blank">Video Demonstration</a></p>
+        `
+      } else {
+        return `
+        `
+      }
+      break;
+    case 6:
+      if (slide == 1) {
+        return 'media/sudoku-solver.png'
+      } else if (slide == 2) {
+        return `
+        <h5>Sudoku Solver</h5>
+        <h5>Programmed in Racket</h5>
+        <p class='slideLink'><a href="https://github.com/Isoaxe/sudoku-solver" target="_blank">GitHub</a></p>
+        `
+      } else {
+        return `
+        `
+      }
+      break;
+    case 7:
+      if (slide == 1) {
+        return 'media/generic-web-app.png'
+      } else if (slide == 2) {
+        return `
+        <h5>Placeholder Web App</h5>
+        <h5>List technologies used here...</h5>
+        <p class='slideLink'><a href="https://www.google.co.uk" target="_blank">GitHub</a></p>
+        `
+      } else {
+        return `
+        `
+      }
+      break;
   }
 }
