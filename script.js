@@ -67,23 +67,6 @@ function checkPagePosition() {
 
 window.onscroll = () => {checkPagePosition()};
 
-// Helper: Selects the tile that was clicked in order to modify.
-function lastPage(tileId) {
-  document.getElementById(tileId).style.animationName = "down-further";
-  document.getElementById(tileId).style.animationDuration = "2s";
-  document.getElementById(tileId).style.animationFillMode = "forwards";
-}
-
-function resetAnimation(tileId) {
-  document.getElementById(tileId).style.animationName = "slide-down";
-}
-
-// Execute the lastPage() function for that tile when clicking on it.
-for (let i = 0; i < 8; i++) {
-  document.getElementById(i).onclick = () => lastPage(i);
-  document.getElementsByClassName("tile")[i].onmouseleave = () => resetAnimation(i);
-}
-
 // Contact form validation of user input.
 function validateForm() {
   const name = document.forms["contact"]["name"].value;
