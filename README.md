@@ -31,7 +31,7 @@ Generate a new directory called 'preprocessed' for the next step.
 
 This runs a script in the package.json file that preprocesses all of the JSX files within the components directory and writes them to the preprocessed directory. These preprocessed files are then readable by the browser as plain JavaScript.
 
-Hint: Hold ctrl-c a few seconds after running this command to resume control of the command line. Control will not automatically be returned since the script watches for changes in the JSX and re-preprocesses on an ad-hoc basis. If you plan on editing the codebase, it's best to keep this running and proceeding with the following steps in another terminal window / tab.
+Hint: Hold ctrl-c a few seconds after running this command to resume control of the command line. Control will not automatically be returned since the script watches for changes in the JSX and re-preprocesses on an ad-hoc basis. If you plan on editing the codebase, it's best to keep this running and proceeding with the following steps in another shell tab.
 
 ### `npm install -g browserify`
 
@@ -47,14 +47,14 @@ Install Watchify globally which works with Browserify and monitors for changes i
 
 ### `npm run watchify` (optional)
 
-Run the Watchify script in the package.json file. This monitors the preprocessed components for change and rebundles as necessary. Leave this running in a seperate terminal window or tab. If the `watchify` script is used, then running `npm run browserify` is no longer necessary.
+Run the Watchify script in the package.json file. This monitors the preprocessed components for change and rebundles as necessary. Leave this running in a seperate shell tab. If the `watchify` script is used, then running `npm run browserify` is no longer necessary.
 
 
 **Now the backend needs to be set up.**
 
 ### `cd backend`
 
-Navigate to the backend folder in a new terminal tab or window to set up the server.
+Navigate to the backend folder in a new shell tab to set up the server.
 
 ### `npm install`
 
