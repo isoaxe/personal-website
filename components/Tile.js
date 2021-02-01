@@ -62,16 +62,16 @@ function Tile(props) {
     <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
       <Carousel>
         <Bounce bottom wait={3600000}>
-          <div className='coverLogo'>
+          <div className='tile coverLogo'>
             <img src={tileSelector(id, 1)} />
           </div>
         </Bounce>
         <Bounce bottom wait={3600000}>
-          <div dangerouslySetInnerHTML={{__html: tileSelector(id, 2)}}>
+          <div dangerouslySetInnerHTML={{__html: tileSelector(id, 2)}} className='tile'>
           </div>
         </Bounce>
         <Bounce bottom wait={3600000}>
-          <div dangerouslySetInnerHTML={{__html: tileSelector(id, 3)}} className='slide3'>
+          <div dangerouslySetInnerHTML={{__html: tileSelector(id, 3)}} className='tile'>
           </div>
         </Bounce>
       </Carousel>
