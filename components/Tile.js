@@ -2,6 +2,8 @@ const React = require('react');
 const ReactDOM = require('react-dom');
 const makeCarousel = require('react-reveal/makeCarousel');
 const Bounce = require('react-reveal/Bounce');
+const DOMPurify = require('dompurify');
+const renderHTML = require('react-render-html');
 const styled = require('styled-components');
 'use strict';
 
@@ -58,6 +60,9 @@ function Tile(props) {
   );
   const Carousel = makeCarousel(CarouselUI);
 
+  let tile2Clean = DOMPurify.sanitize(tileSelector(id, 2), {USE_PROFILES: {html: true}});
+  let tile3Clean = DOMPurify.sanitize(tileSelector(id, 3), {USE_PROFILES: {html: true}});
+
   return (
     <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
       <Carousel>
@@ -67,11 +72,13 @@ function Tile(props) {
           </div>
         </Bounce>
         <Bounce bottom wait={3600000}>
-          <div dangerouslySetInnerHTML={{__html: tileSelector(id, 2)}} className='tile'>
+          <div className='tile'>
+            {renderHTML(tile2Clean)}
           </div>
         </Bounce>
         <Bounce bottom wait={3600000}>
-          <div dangerouslySetInnerHTML={{__html: tileSelector(id, 3)}} className='tile'>
+          <div className='tile'>
+            {renderHTML(tile3Clean)}
           </div>
         </Bounce>
       </Carousel>
