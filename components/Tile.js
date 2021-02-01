@@ -60,6 +60,15 @@ function Tile(props) {
   );
   const Carousel = makeCarousel(CarouselUI);
 
+  // Add hook to automatically open link in new page.
+  DOMPurify.addHook('afterSanitizeAttributes', function(node) {
+    // set all elements owning target to target=_blank
+    if ('target' in node) {
+      node.setAttribute('target', '_blank');
+      node.setAttribute('rel', 'noopener noreferrer');
+    }
+  });
+
   let tile2Clean = DOMPurify.sanitize(tileSelector(id, 2), {USE_PROFILES: {html: true}});
   let tile3Clean = DOMPurify.sanitize(tileSelector(id, 3), {USE_PROFILES: {html: true}});
 
