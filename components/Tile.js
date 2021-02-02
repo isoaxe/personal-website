@@ -23,7 +23,7 @@ function Tile(props) {
     align-items: center;
     flex-direction: column;
     position: relative;
-    background-color: #fff;
+    background-color: #9daba1;
     overflow: hidden;
     margin: 5px;
     padding: 10px 0px;
@@ -34,7 +34,6 @@ function Tile(props) {
     text-align: center;
     height: 250px;
     ${props => props.hover ? css`border: 3px solid #1e688f;` : css`border: 3px solid #fff;`}
-    ${props => props.hover ? css`background-color: #9daba1;` : css`background-color: #fff;`}
   `;
   const ArrowContainer = styledTag.div`
     display: flex;
