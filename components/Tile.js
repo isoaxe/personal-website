@@ -69,6 +69,7 @@ function Tile(props) {
     }
   });
 
+  // Sanatize HTML to prevent possibility of XSS attacks.
   let tile2Clean = DOMPurify.sanitize(tileSelector(id, 2), {USE_PROFILES: {html: true}});
   let tile3Clean = DOMPurify.sanitize(tileSelector(id, 3), {USE_PROFILES: {html: true}});
 
