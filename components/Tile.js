@@ -74,8 +74,21 @@ function Tile(props) {
   let tile2Clean = DOMPurify.sanitize(tileSelector(id, 2), {USE_PROFILES: {html: true}});
   let tile3Clean = DOMPurify.sanitize(tileSelector(id, 3), {USE_PROFILES: {html: true}});
 
+  function staggeredDelay() {
+    switch(id) {
+      case 0: return 0;
+      case 1: return 150;
+      case 2: return 300;
+      case 3: return 0;
+      case 4: return 150;
+      case 5: return 0;
+      case 6: return 150;
+      case 7: return 300;
+    }
+  }
+
   return (
-    <Slide bottom>
+    <Slide bottom delay={staggeredDelay()}>
       <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
         <Carousel>
           <Reveal wait={3600000}>
