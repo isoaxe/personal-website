@@ -95,7 +95,7 @@ function Tile(props) {
   );
 }
 
-// Find all DOM containers, and render Like buttons into them.
+// Find all appropriate DOM containers, and render Tile components into them.
 document.querySelectorAll('.tile-container')
   .forEach(domContainer => {
     const id = domContainer.dataset.id;
