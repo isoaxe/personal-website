@@ -3,6 +3,7 @@ const ReactDOM = require('react-dom');
 const makeCarousel = require('react-reveal/makeCarousel');
 const Bounce = require('react-reveal/Bounce');
 const Reveal = require('react-reveal/Reveal');
+const Slide = require('react-reveal/Slide');
 const DOMPurify = require('dompurify');
 const renderHTML = require('react-render-html');
 const styled = require('styled-components');
@@ -74,25 +75,27 @@ function Tile(props) {
   let tile3Clean = DOMPurify.sanitize(tileSelector(id, 3), {USE_PROFILES: {html: true}});
 
   return (
-    <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
-      <Carousel>
-        <Reveal wait={3600000}>
-          <div className='tile coverLogo'>
-            <img src={tileSelector(id, 1)} />
-          </div>
-        </Reveal>
-        <Bounce bottom wait={3600000}>
-          <div className='tile'>
-            {renderHTML(tile2Clean)}
-          </div>
-        </Bounce>
-        <Bounce bottom wait={3600000}>
-          <div className='tile'>
-            {renderHTML(tile3Clean)}
-          </div>
-        </Bounce>
-      </Carousel>
-    </div>
+    <Slide bottom>
+      <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+        <Carousel>
+          <Reveal wait={3600000}>
+            <div className='tile coverLogo'>
+              <img src={tileSelector(id, 1)} />
+            </div>
+          </Reveal>
+          <Bounce bottom wait={3600000}>
+            <div className='tile'>
+              {renderHTML(tile2Clean)}
+            </div>
+          </Bounce>
+          <Bounce bottom wait={3600000}>
+            <div className='tile'>
+              {renderHTML(tile3Clean)}
+            </div>
+          </Bounce>
+        </Carousel>
+      </div>
+    </Slide>
   );
 }
 
