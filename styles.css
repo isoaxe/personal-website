@@ -166,7 +166,8 @@ a:link, a:visited {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 250px;
+  height: 100%;
+  background-color: #fff;
 }
 
 .coverLogo img {
