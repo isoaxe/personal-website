@@ -2,6 +2,7 @@ const React = require('react');
 const ReactDOM = require('react-dom');
 const makeCarousel = require('react-reveal/makeCarousel');
 const Bounce = require('react-reveal/Bounce');
+const Reveal = require('react-reveal/Reveal');
 const DOMPurify = require('dompurify');
 const renderHTML = require('react-render-html');
 const styled = require('styled-components');
@@ -75,11 +76,11 @@ function Tile(props) {
   return (
     <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
       <Carousel>
-        <Bounce bottom wait={3600000}>
+        <Reveal wait={3600000}>
           <div className='tile coverLogo'>
             <img src={tileSelector(id, 1)} />
           </div>
-        </Bounce>
+        </Reveal>
         <Bounce bottom wait={3600000}>
           <div className='tile'>
             {renderHTML(tile2Clean)}
