@@ -87,44 +87,49 @@ module.exports = function tileSelector(id, slide) {
       break;
     case 5:
       if (slide == 1) {
-        return 'media/space-invaders.png'
+        return 'media/generic-web-app.png'
       } else if (slide == 2) {
         return `
-        <h5>Space Invaders</h5>
-        <h5>Programmed in Racket</h5>
-        <p><a href="https://github.com/Isoaxe/space-invaders" target="_blank">GitHub</a></p>
-        <p><a href="https://youtu.be/DLwNWz1fDoU" target="_blank">Video Demonstration</a></p>
+        <h5>Condo Management App</h5>
+        <h5>Front end was built with React / Redux while the back end was done using Firebase</h5>
+        <p>Test out the <a href="/condo" target="_blank">app</a></p>
         `
       } else {
         return `
+        <p>This app allows condo management companies to track and assign tasks that need to be completed for residents. For example, watering of plants and feeding of pets can be scheduled for when residents are gone on holidays.</p>
+        <p>Find out more on the <a href="https://github.com/Isoaxe/space-invaders" target="_blank">GitHub</a> readme.</p>
         `
       }
       break;
     case 6:
       if (slide == 1) {
-        return 'media/sudoku-solver.png'
+        return 'media/jammming.png'
       } else if (slide == 2) {
         return `
-        <h5>Sudoku Solver</h5>
-        <h5>Programmed in Racket</h5>
-        <p><a href="https://github.com/Isoaxe/sudoku-solver" target="_blank">GitHub</a></p>
+        <h5>Jammming</h5>
+        <h5>Music searching app programmed with React and using the Spotify API</h5>
+        <p>Give the <a href="/jammming" target="_blank">app</a> a go</p>
         `
       } else {
         return `
+        <p>This app allows the user to search for music using the Spotify API. Songs can be added or removed from a playlist and then saved to the users Spotify account, amongst other functions.</p>
+        <p>See the <a href="https://github.com/Isoaxe/jammming" target="_blank">GitHub</a> readme for more detail.</p>
         `
       }
       break;
     case 7:
       if (slide == 1) {
-        return 'media/generic-web-app.png'
+        return 'media/ravenous.png'
       } else if (slide == 2) {
         return `
-        <h5>Placeholder Web App</h5>
-        <h5>List technologies used here...</h5>
-        <p><a href="https://www.google.co.uk" target="_blank">GitHub</a></p>
+        <h5>Ravenous</h5>
+        <h5>Restaurant finding app built with React and interacting with the Yelp API</h5>
+        <p>Try out the <a href="/ravenous" target="_blank">app</a></p>
         `
       } else {
         return `
+        <p>Ravenous allows the user to find restaurants based on a search term, price and location. Results can be sorted based on best match, highest rated and most reviewed.</p>
+        <p>See the <a href="https://github.com/Isoaxe/ravenous" target="_blank">GitHub</a> readme for more detail.</p>
         `
       }
       break;
