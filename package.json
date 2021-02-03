@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "jsx": "npx babel --watch components --out-dir preprocessed --presets react-app/prod",
     "browserify": "browserify preprocessed/*.js -o bundle.js",
-    "watchify": "watchify preprocessed/*.js -o bundle.js"
+    "watchify": "watchify preprocessed/*.js -o bundle.js",
+    "build": "browserify bundle.js -g [ envify --NODE_ENV production ] -g uglifyify | terser --compress --mangle > ./build.js"
   },
   "repository": {
     "type": "git",
