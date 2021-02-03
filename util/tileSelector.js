@@ -24,11 +24,11 @@ module.exports = function tileSelector(id, slide) {
         <h5>Miscellaneous Courses</h5>
         <h5>Udacity / Codecademy</h5>
         <h5>600 Hours</h5>
-        <h5>40% Complete</h5>
+        <h5>85% Complete</h5>
         `
       } else {
         return `
-        <p>Completed various courses covering topics such as HTML, CSS, Python, JavaScript, Bootstrap, React, AJAX, Node, Git, the command line and networking.</p>
+        <p>Completed various courses covering topics such as HTML, CSS, Python, JavaScript, Bootstrap, Node, React, Express, Mocha & Chai, Git, the command line and networking.</p>
         <p><a href="https://trello.com/b/F92DHTFU/other-programming-education" target="_blank">View Progress on Trello</a></p>
         `
       }
@@ -81,7 +81,7 @@ module.exports = function tileSelector(id, slide) {
         `
       } else {
         return `
-        <p>Plans to commence this masters of science in computer science from Georgia Tech on completion of the OSSU undergraduate.</p>
+        <p>Plans to commence this masters of science in computer science from Georgia Tech on completion of the requisite sections in the OSSU undergraduate.</p>
         `
       }
       break;
