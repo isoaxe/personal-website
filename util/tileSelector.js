@@ -18,6 +18,23 @@ module.exports = function tileSelector(id, slide) {
       break;
     case 1:
       if (slide == 1) {
+        return 'media/logo-CC&UC.png'
+      } else if (slide == 2) {
+        return `
+        <h5>Miscellaneous Courses</h5>
+        <h5>Udacity / Codecademy</h5>
+        <h5>600 Hours</h5>
+        <h5>40% Complete</h5>
+        `
+      } else {
+        return `
+        <p>Completed various courses covering topics such as HTML, CSS, Python, JavaScript, Bootstrap, React, AJAX, Node, Git, the command line and networking.</p>
+        <p><a href="https://trello.com/b/F92DHTFU/other-programming-education" target="_blank">View Progress on Trello</a></p>
+        `
+      }
+      break;
+    case 2:
+      if (slide == 1) {
         return 'media/logo-UBC.png'
       } else if (slide == 2) {
         return `
@@ -34,7 +51,7 @@ module.exports = function tileSelector(id, slide) {
         `
       }
       break;
-    case 2:
+    case 3:
       if (slide == 1) {
         return 'media/logo-OSSU.png'
       } else if (slide == 2) {
@@ -49,23 +66,6 @@ module.exports = function tileSelector(id, slide) {
         <p><p>This is a crowdsourced collaborative effort maintained on GitHub, intended to cover all of the material encountered in a 4-year undergraduate degree.</p>
         <p>Core material covers programming, maths, systems, theory and applications.</p>
         <p><a href="https://trello.com/b/cSR4Hrz8/ossu-computer-science-curriculum-v8" target="_blank">View Progress on Trello</a></p>
-        `
-      }
-      break;
-    case 3:
-      if (slide == 1) {
-        return 'media/logo-CC&UC.png'
-      } else if (slide == 2) {
-        return `
-        <h5>Miscellaneous Courses</h5>
-        <h5>Udacity / Codecademy</h5>
-        <h5>600 Hours</h5>
-        <h5>40% Complete</h5>
-        `
-      } else {
-        return `
-        <p>Completed various courses covering topics such as HTML, CSS, Python, JavaScript, Bootstrap, React, AJAX, Node, Git, the command line and networking.</p>
-        <p><a href="https://trello.com/b/F92DHTFU/other-programming-education" target="_blank">View Progress on Trello</a></p>
         `
       }
       break;
