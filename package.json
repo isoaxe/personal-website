@@ -21,8 +21,6 @@
   },
   "homepage": "https://github.com/Isoaxe/personal-website#readme",
   "dependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-react-app": "^3.1.2",
     "dompurify": "^2.2.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -31,6 +29,8 @@
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2",
     "envify": "^4.1.0",
     "terser": "^5.5.1",
     "uglifyify": "^5.0.2"
