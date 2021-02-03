@@ -8,7 +8,7 @@
     "jsx": "npx babel --watch components --out-dir preprocessed --presets react-app/prod",
     "browserify": "browserify preprocessed/*.js -o development.js",
     "watchify": "watchify preprocessed/*.js -o development.js",
-    "build": "browserify development.js -g [ envify --NODE_ENV production ] -g uglifyify | terser --compress --mangle > ./build.js"
+    "build": "browserify development.js -g [ envify --NODE_ENV production ] -g uglifyify | terser --compress --mangle > ./production.js"
   },
   "repository": {
     "type": "git",
