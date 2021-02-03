@@ -1,5 +1,6 @@
 .DS_Store
-bundle.js
+development.js
+production.js
 node_modules/
 preprocessed/
 
