@@ -1,4 +1,4 @@
-module.exports = function tileSelector(id, slide) {
+function tileSelector(id, slide) {
   switch (id) {
     case 0:
       if (slide == 1) {
@@ -135,3 +135,5 @@ module.exports = function tileSelector(id, slide) {
       break;
   }
 }
+
+module.exports = tileSelector;
