@@ -5,6 +5,8 @@ const path = require('path');
 const rootDir = require("./util/path");
 const homeRoute = require("./routes/home");
 const emailRoute = require("./routes/email");
+const ravenousRoute = require("./routes/ravenous");
+const jammmingRoute = require("./routes/jammming");
 
 const app = express();
 
@@ -17,5 +19,7 @@ app.use('/', express.static(path.join(rootDir, "..")));
 
 app.use(homeRoute);
 app.use(emailRoute);
+app.use(ravenousRoute);
+app.use(jammmingRoute);
 
 app.listen(3000);

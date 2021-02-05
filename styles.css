@@ -166,7 +166,8 @@ a:link, a:visited {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 250px;
+  height: 100%;
+  background-color: #fff;
 }
 
 .coverLogo img {
@@ -174,13 +175,13 @@ a:link, a:visited {
   max-height: 250px;
 }
 
-.slide3 p {
+.tile p, h5 {
   font-weight: 400;
   font-size: 16px;
-  margin: 15px 10px;
+  margin: 20px 10px;
 }
 
-.slideLink a:hover {
+.tile p a:hover {
   color: #1e688f;
 }
 
