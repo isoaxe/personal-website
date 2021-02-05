@@ -62,10 +62,10 @@ nav .navmenu {
 .more {
   display: inline-block;
   margin: auto;
-  width: 200px;
-  height: 35px;
+  width: 180px;
+  height: 29px;
   margin-top: 20px;
-  padding-top: 11px;
+  padding-top: 5px;
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
   text-align: center;
@@ -76,7 +76,10 @@ nav .navmenu {
 
 .more:hover {
   background-color: #1e688f;
-  transition: background-color 0.2s;
+  width: 200px;
+  height: 35px;
+  padding-top: 11px;
+  transition: background-color 0.5s, width 0.5s, height 0.5s, padding-top 0.5s;
   border: 3px solid #1e688f;
 }
 
@@ -264,7 +267,7 @@ a:link, a:visited {
     margin-top: 13px;
     padding-top: 7px;
     font-size: 15px;
-    border-width: 2px;
+    border-width: 3px;
     border-radius: 3px;
   }
 }
