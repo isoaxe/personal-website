@@ -76,11 +76,11 @@ nav .navmenu {
 
 .more:hover {
   background-color: #1e688f;
-  width: 200px;
-  height: 35px;
-  padding-top: 11px;
-  transition: background-color 0.5s, width 0.5s, height 0.5s, padding-top 0.5s;
-  border: 3px solid #1e688f;
+  width: 190px;
+  height: 33px;
+  padding-top: 9px;
+  border-color: #1e688f;
+  transition: background-color 0.5s, width 0.5s, height 0.5s, padding-top 0.5s, border-color 0.5s;
 }
 
 .submit {
