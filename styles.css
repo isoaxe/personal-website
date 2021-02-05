@@ -99,8 +99,11 @@ nav .navmenu {
 
 .submit:hover {
   background-color: #1e688f;
-  transition: background-color 0.2s;
-  border: 2px solid #1e688f;
+  border-color: #1e688f;
+  height: 34px;
+  padding-left: 13px;
+  padding-right: 13px;
+  transition: background-color 0.5s, border-color 0.5s, height 0.5s, padding-left 0.5s, padding-right 0.5s;
 }
 
 a:link, a:visited {
@@ -276,5 +279,11 @@ a:link, a:visited {
     height: 26px;
     padding-top: 6px;
     transition: width 0.5s, height 0.5s, padding-top 0.5s;
+  }
+
+  .submit:hover {
+    padding-left: 24px;
+    padding-right: 24px;
+    transition: padding-left 0.5s, padding-right 0.5s;
   }
 }
