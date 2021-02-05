@@ -13,6 +13,7 @@ const tileSelector = require('../util/tileSelector.js');
 
 const styledTag = styled.default;
 const css = styled.css;
+const TEN_HOURS = 36000000; // 36 million ms = 10 hours.
 
 
 function Tile(props) {
@@ -91,17 +92,17 @@ function Tile(props) {
     <Slide bottom delay={staggeredDelay()}>
       <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
         <Carousel>
-          <Reveal wait={3600000}>
+          <Reveal wait={TEN_HOURS}>
             <div className='tile coverLogo'>
               <img src={tileSelector(id, 1)} />
             </div>
           </Reveal>
-          <Bounce bottom wait={3600000}>
+          <Bounce bottom wait={TEN_HOURS}>
             <div className='tile'>
               {renderHTML(tile2Clean)}
             </div>
           </Bounce>
-          <Bounce bottom wait={3600000}>
+          <Bounce bottom wait={TEN_HOURS}>
             <div className='tile'>
               {renderHTML(tile3Clean)}
             </div>
