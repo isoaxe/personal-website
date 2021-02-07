@@ -128,7 +128,7 @@ a:link, a:visited {
 .container {
   max-width: 1200px;
   margin: auto;
-  padding: 40px 1.5%;
+  padding: 60px 1.5% 20px;
 }
 
 .title {
