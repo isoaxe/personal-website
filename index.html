@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="./styles.css">
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Nunito:wght@400;600&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Nunito:wght@400;600&family=Permanent+Marker&display=swap" rel="stylesheet">
     <script type="text/javascript" src="./script.js" async></script>
   </head>
 
@@ -41,7 +41,7 @@
     <!-- Education -->
     <section id="education" class="container-wrapper">
       <div class="container">
-        <h2 class="title">- Education -</h2>
+        <div class="title title-container" data-text="- Education -"></div>
         <div class="flex">
           <div class="tile-container" data-id="0"></div>
           <div class="tile-container" data-id="1"></div>
@@ -55,7 +55,7 @@
     <!-- The Tech -->
     <section id="tech" class="container-wrapper">
       <div class="container">
-        <h2 class="title">- The Tech -</h2>
+        <div class="title title-container" data-text="- The Tech -"></div>
         <picture>
           <source media="(min-width: 801px)" srcset="media/tech.jpg">
           <source media="(max-width: 800px)" srcset="media/tech-mobile.png">
@@ -67,7 +67,7 @@
     <!-- Projects -->
     <section id="projects" class="container-wrapper">
       <div class="container">
-        <h2 class="title">- Projects -</h2>
+        <div class="title title-container" data-text="- Projects -"></div>
         <div class="flex">
           <div class="tile-container" data-id="5"></div>
           <div class="tile-container" data-id="6"></div>
@@ -79,7 +79,7 @@
     <!-- Contact Me -->
     <section id="contact" class="container-wrapper">
       <div class="container">
-        <h2 class="title">- Contact -</h2>
+        <div class="title title-container" data-text="- Contact -"></div>
         <h4 class="contact-text">Questions? Send me a message below.</h4>
         <form action="/submit" method="POST" onsubmit="return validateForm()" name="contact">
           <input id="name" class="contact-user" type="text" placeholder="Name" name="name"><br>
