@@ -15,7 +15,7 @@ header {
   text-align: center;
   height: 100%;
   color: #fff;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -27,8 +27,6 @@ header h1 {
 }
 
 header img {
-  display: block;
-  margin: auto;
   padding: 50px 0px;
   width: 300px;
   border-radius: 150px;
@@ -70,8 +68,8 @@ nav .navmenu {
 
 .column-flex {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 
@@ -80,8 +78,6 @@ nav .navmenu {
 }
 
 .more {
-  display: inline-block;
-  margin: auto;
   width: 180px;
   height: 29px;
   margin-top: 20px;
@@ -296,8 +292,6 @@ a:link, a:visited {
   }
 
   .more {
-    display: inline-block;
-    margin: auto;
     width: 130px;
     height: 23px;
     margin-top: 13px;
