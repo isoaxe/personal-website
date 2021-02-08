@@ -230,22 +230,11 @@ a:link, a:visited {
   text-align: center;
 }
 
-#video-background {
+#background {
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
-  background-position: center;
-  object-fit: cover;
-  z-index: -2;
-}
-
-#static-background {
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  position: absolute;
   background-position: center;
   object-fit: cover;
   z-index: -2;
