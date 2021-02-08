@@ -38,7 +38,7 @@ function tileSelector(id, slide) {
         return 'media/logo-UBC.png'
       } else if (slide == 2) {
         return `
-        <p><a href="https://www.edx.org/micromasters/software-development" target="_blank">Software Development MicroMasters</a></p>
+        <p><a href="https://www.edx.org/micromasters/ubcx-software-development" target="_blank">Software Development MicroMasters</a></p>
         <h5>University of British Columbia</h5>
         <h5>500 Hours</h5>
         <h5>35% Complete</h5>
