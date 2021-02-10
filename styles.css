@@ -15,7 +15,6 @@ header {
   text-align: center;
   height: 100%;
   color: #fff;
-  transform: translate(0%, -10%);
 }
 
 header h1 {
@@ -25,6 +24,7 @@ header h1 {
 }
 
 header img {
+  position: relative;
   padding: 50px 0px;
   width: 300px;
   border-radius: 150px;
@@ -66,7 +66,7 @@ nav .navmenu {
 
 .column-flex {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
 }
@@ -137,6 +137,7 @@ a:link, a:visited {
 }
 
 .container-wrapper {
+  position: relative;
   width: 100%;
 }
 
@@ -216,6 +217,10 @@ a:link, a:visited {
   width: 100%;
   height: 100vh;
   padding-bottom: 0;
+}
+
+#education {
+  background-color: #fff;
 }
 
 #tech {
