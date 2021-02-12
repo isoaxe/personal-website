@@ -89,7 +89,7 @@ function Tile(props) {
   }
 
   return (
-    <Slide bottom delay={staggeredDelay()}>
+    <Slide bottom delay={400 + staggeredDelay()}>
       <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
         <Carousel>
           <Reveal wait={TEN_HOURS}>
