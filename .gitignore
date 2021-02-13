@@ -1,6 +1,5 @@
 .DS_Store
 development.js
-production.js
 node_modules/
 preprocessed/
 
