@@ -22,4 +22,4 @@ app.use(emailRoute);
 app.use(ravenousRoute);
 app.use(jammmingRoute);
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
