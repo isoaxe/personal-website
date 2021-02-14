@@ -39,7 +39,7 @@ Install Browserify globally which bundles dependencies and allows us to `require
 
 ### `npm run browserify`
 
-Run the Browserify script in the package.json file. This bundles all of the components from the preprocessed directory into a single `bundle.js` file that is loaded in the HTML file via a `<script>`. This bundling occurs only when running the script, so any changes to the components will mean that the script will need to be run again to be reflected in the browser, unless the following optional steps are taken.
+Run the Browserify script in the package.json file. This bundles all of the components from the preprocessed directory into a single `development.js` file. This bundling occurs only when running the script, so any changes to the components will mean that the script will need to be run again to be reflected in the browser, unless the following optional steps are taken.
 
 ### `npm install -g watchify` (optional)
 
@@ -48,6 +48,10 @@ Install Watchify globally which works with Browserify and monitors for changes i
 ### `npm run watchify` (optional)
 
 Run the Watchify script in the package.json file. This monitors the preprocessed components for change and rebundles as necessary. Leave this running in a seperate shell tab. If the `watchify` script is used, then running `npm run browserify` is no longer necessary.
+
+### `npm run build`
+
+This takes the `development.js` file and converts it into `production.js` by running envify, uglifyify and terser on it. This is then loaded in the HTML file via a `<script>` tag.
 
 
 **Now the backend needs to be set up.**
