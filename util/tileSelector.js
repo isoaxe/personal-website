@@ -124,7 +124,7 @@ function tileSelector(id, slide) {
         return `
         <h5>Ravenous</h5>
         <h5>Restaurant finding app built with React and interacting with the Yelp API</h5>
-        <p>Try out the <a href="/ravenous" target="_blank">app</a></p>
+        <p>Try out the <a href="https://portfolio-ravenous.herokuapp.com/" target="_blank">app</a></p>
         `
       } else {
         return `
