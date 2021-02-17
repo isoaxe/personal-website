@@ -108,7 +108,7 @@ function tileSelector(id, slide) {
         return `
         <h5>Jammming</h5>
         <h5>Music searching app programmed with React and using the Spotify API</h5>
-        <p>Give the <a href="/jammming" target="_blank">app</a> a go</p>
+        <p>Give the <a href="https://portfolio-jammming.herokuapp.com/" target="_blank">app</a> a go</p>
         `
       } else {
         return `
