@@ -1,6 +1,6 @@
 .DS_Store
 development.js
-node_modules/
+node_modules
 preprocessed/
 
 #The following is from Namecheap:
