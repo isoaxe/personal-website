@@ -35,7 +35,7 @@ Hint: Hold ctrl-c a few seconds after running this command to resume control of 
 
 ### `npm install -g browserify`
 
-Install Browserify globally which bundles dependencies and allows us to `require('module')` from the browser as we do with Node. This means that third-party Node modules can be used that were unavailable via `<script>` import in the HTML file.
+Install Browserify globally which bundles dependencies and allows us to `require('module')` from the browser as is done with Node. This means that third-party Node modules can be used that were unavailable via `<script>` import in the HTML file.
 
 ### `npm run browserify`
 
@@ -66,4 +66,4 @@ Install all of the Node dependencies for Express and other third party packages 
 
 ### `npm start`
 
-Spins up a local development server. Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload if you make edits to files in the backend folder. You will also see any lint errors in the console.
+Spins up a server, either locally or hosted. If done in the local environment, open [http://localhost:3000](http://localhost:3000) to view it in the browser. By default the `production.js` script is loaded. Any changes made to the codebase will not be updated until the relatively time-consuming `build` is run again. Therefore for development purposes, comment out that script in `index.html` and uncomment the `development.js` script so that is used instead. This way, the page will reload if you make edits to files in the backend folder without having to run the build each time. You will also see any lint errors in the console.
