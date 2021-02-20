@@ -108,7 +108,7 @@ function tileSelector(id, slide) {
         return `
         <h5>Jammming</h5>
         <h5>Music searching app programmed with React and using the Spotify API</h5>
-        <p>Give the <a href="https://portfolio-jammming.herokuapp.com/" target="_blank">app</a> a go</p>
+        <p>After opening the <a href="https://portfolio-jammming.herokuapp.com/" target="_blank">app</a>, please be patient as the servers wake up.</p>
         `
       } else {
         return `
@@ -124,7 +124,7 @@ function tileSelector(id, slide) {
         return `
         <h5>Ravenous</h5>
         <h5>Restaurant finding app built with React and interacting with the Yelp API</h5>
-        <p>Try out the <a href="https://portfolio-ravenous.herokuapp.com/" target="_blank">app</a></p>
+        <p>After opening the <a href="https://portfolio-ravenous.herokuapp.com/" target="_blank">app</a>, please be patient as the servers wake up.</p>
         `
       } else {
         return `
