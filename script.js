@@ -72,6 +72,7 @@ function validateForm() {
   const name = document.forms["contact"]["name"].value;
   const email = document.forms["contact"]["email"].value;
   const message = document.forms["contact"]["message"].value;
+  const checkbox = document.forms["contact"]["checkbox"].checked;
 
   // Check each field for valid input.
   if (name === "") {
@@ -90,6 +91,9 @@ function validateForm() {
     document.getElementById("message").style.outline = "medium solid red";
     document.getElementById("message").placeholder = "Please enter your message here";
   }
+  if (!checkbox) {
+    document.getElementById("checkbox-label").style.color = "red";
+  }
 
   // Remove red box around fields where valid input has been entered on next submission.
   if (name !== "") {
@@ -101,9 +105,12 @@ function validateForm() {
   if (message !== "") {
     document.getElementById("message").style.outline = 0;
   }
+  if (checkbox) {
+    document.getElementById("checkbox-label").style.color = "white";
+  }
 
   // If all fields pass, then return true so message can be sent.
-  if (name !== "" && email.indexOf('@') !== -1 && message !== "") {
+  if (name !== "" && email.indexOf('@') !== -1 && message !== "" && checkbox) {
     alert('Message sent!');
     return true;
   }
