@@ -72,7 +72,8 @@ function validateForm() {
   const name = document.forms["contact"]["name"].value;
   const email = document.forms["contact"]["email"].value;
   const message = document.forms["contact"]["message"].value;
-  const checkbox = document.forms["contact"]["checkbox"].checked;
+  const checkbox1 = document.forms["contact"]["checkbox1"].checked;
+  const checkbox2 = document.forms["contact"]["checkbox2"].checked;
 
   // Check each field for valid input.
   if (name === "") {
@@ -91,7 +92,7 @@ function validateForm() {
     document.getElementById("message").style.outline = "medium solid red";
     document.getElementById("message").placeholder = "Please enter your message here";
   }
-  if (!checkbox) {
+  if ((checkbox1 && !checkbox2) === false) {
     document.getElementById("checkbox-label").style.color = "red";
   }
 
@@ -105,7 +106,7 @@ function validateForm() {
   if (message !== "") {
     document.getElementById("message").style.outline = 0;
   }
-  if (checkbox) {
+  if (checkbox1 && !checkbox2) {
     document.getElementById("checkbox-label").style.color = "white";
   }
 
