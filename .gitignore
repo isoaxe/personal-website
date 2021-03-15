@@ -8,3 +8,6 @@ preprocessed/
 .well-known/
 backend/tmp/
 nc_assets/
+
+# Firebase:
+.firebase
