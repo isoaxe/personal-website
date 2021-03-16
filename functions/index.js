@@ -5,7 +5,6 @@ const express = require("express");
 const path = require("path");
 
 const rootDir = require("./util/path");
-const homeRoute = require("./routes/home");
 const emailRoute = require("./routes/email");
 
 // Initialize Firebase in order to access its services.
@@ -19,7 +18,6 @@ app.use(bodyParser.urlencoded({extended: false}));
    true root (up one level) in order to find the required file (i.e. index.html) */
 app.use("/", express.static(path.join(rootDir, "..")));
 
-app.use(homeRoute);
 app.use(emailRoute);
 
 // Create and Deploy Your First Cloud Functions
