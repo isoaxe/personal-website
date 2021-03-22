@@ -3,6 +3,7 @@ const admin = require("firebase-admin");
 const bodyParser = require("body-parser");
 const express = require("express");
 const path = require("path");
+const cors = require('cors');
 
 const rootDir = require("./util/path");
 const emailRoute = require("./routes/email");
@@ -11,6 +12,9 @@ const emailRoute = require("./routes/email");
 admin.initializeApp();
 
 const app = express();
+
+// Automatically allow cross-origin requests.
+app.use(cors({ origin: true }));
 
 app.use(bodyParser.urlencoded({extended: false}));
 
