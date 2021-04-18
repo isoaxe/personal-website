@@ -8,3 +8,8 @@ preprocessed/
 .well-known/
 backend/tmp/
 nc_assets/
+
+# Firebase:
+.firebase
+firebase-debug.log
+ui-debug.log
