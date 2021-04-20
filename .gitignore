@@ -1,15 +1,18 @@
+# Filesystem:
 .DS_Store
+
+# Script-Generated:
 development.js
-node_modules
+node_modules/
 preprocessed/
 
-#The following is from Namecheap:
+# Namecheap:
 .htaccess
 .well-known/
 backend/tmp/
 nc_assets/
 
 # Firebase:
-.firebase
+.firebase/
 firebase-debug.log
 ui-debug.log
