@@ -55,6 +55,10 @@ Run the Watchify script in the package.json file. This monitors the preprocessed
 
 This takes the `development.js` file and converts it into `production.js` by running envify, uglifyify and terser on it. This is then loaded in the HTML file via a `<script>` tag.
 
+### Note on Loading Scripts:
+
+By default the `production.js` script is loaded. Any changes made to the codebase will not be updated until the relatively time-consuming `build` is run again. Therefore for development purposes, comment out that script in `index.html` and uncomment the `development.js` script so that is used instead. This way, the page will reload if you make edits to files in the backend folder without having to run the build each time. You will also see any lint errors in the console.
+
 
 **Now the backend functions need to be set up.**
 
@@ -81,7 +85,7 @@ Move up to the main directory again and run the `serve` script. This starts both
 Deploy both Firebase hosting and Firebase functions. In future, these can be deployed separately as required. Run `npm deploy` from this main directory for hosting or the same script from the `functions` directory to deploy functions.
 
 
-**Now the backend needs to be set up.**
+**Alternative to Firebase functions: Create Node server.**
 
 ### `cd backend`
 
@@ -93,4 +97,4 @@ Install all of the Node dependencies for Express and other third party packages 
 
 ### `npm start`
 
-Spins up a server, either locally or hosted. If done in the local environment, open [http://localhost:3000](http://localhost:3000) to view it in the browser. By default the `production.js` script is loaded. Any changes made to the codebase will not be updated until the relatively time-consuming `build` is run again. Therefore for development purposes, comment out that script in `index.html` and uncomment the `development.js` script so that is used instead. This way, the page will reload if you make edits to files in the backend folder without having to run the build each time. You will also see any lint errors in the console.
+Spins up a server, either locally or hosted. If done in the local environment, open [http://localhost:3000](http://localhost:3000) to view it in the browser.
