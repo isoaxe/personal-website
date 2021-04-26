@@ -9,7 +9,9 @@ The website was originally developed in HTML, CSS and vanilla JavaScript.
 
 When the contact form was built, Node.js and Express.js were selected to handle middleware routing and backend functions such as server creation and automatic generation of emails on form submission.
 
-Finally, React was [integrated gradually](https://reactjs.org/docs/add-react-to-a-website.html). Components were written in JSX and then preprocessed by Babel via a [CLI script](https://github.com/Isoaxe/personal-website/blob/master/package.json) so that they would be readable by a browser. Then Browserify was used to bundle the preprocessed components into a single file, which was in turn loaded via a `<script>` in the HTML file. This was necessary to run third party Node modules client-side.
+React was [integrated gradually](https://reactjs.org/docs/add-react-to-a-website.html). Components were written in JSX and then preprocessed by Babel via a [CLI script](https://github.com/Isoaxe/personal-website/blob/master/package.json) so that they would be readable by a browser. Then Browserify was used to bundle the preprocessed components into a single file, which was in turn loaded via a `<script>` in the HTML file. This was necessary to run third party Node modules client-side.
+
+Finally, the website migrated from Namecheap to Firebase hosting where Firebase functions were used to handle the backend functionality via a serverless architecture.
 
 
 ## Local Setup
