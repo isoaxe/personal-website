@@ -112,7 +112,7 @@ function validateForm() {
 
   // If all fields pass, then return true so message can be sent.
   if (name !== "" && email.indexOf('@') !== -1 && message !== "" && (checkbox1 && !checkbox2)) {
-    alert("Message sent! \n\n Check your junk mail folder if not found.");
+    alert("Message sent! \n\nYou have also been sent a copy. \nCheck your junk mail folder if not found.");
     return true;
   }
   return false;
