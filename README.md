@@ -56,6 +56,31 @@ Run the Watchify script in the package.json file. This monitors the preprocessed
 This takes the `development.js` file and converts it into `production.js` by running envify, uglifyify and terser on it. This is then loaded in the HTML file via a `<script>` tag.
 
 
+**Now the backend functions need to be set up.**
+
+*Note:* This requires the setting up of a Firebase project (hosting and functions). If you want to host someplace else or simply want to test locally, it's best to use the alternative method below.
+
+### `npm install -g firebase-tools`
+
+After setting up the [Firebase project](https://firebase.google.com/), install the Firebase CLI. You will also need to [login](https://firebase.google.com/docs/cli#sign-in-test-cli) and link this project to the remote.
+
+### `cd functions`
+
+Navigate to the functions folder in a new shell tab to set up the server.
+
+### `npm install`
+
+Install all of the Node dependencies for Express and other third party packages used by Firebase functions.
+
+### `cd .. && npm run serve` (local only)
+
+Move up to the main directory again and run the `serve` script. This starts both the hosting and functions emulators for local testing. The hosted site and function logs can then be viewed in the [browser](http://localhost:4000).
+
+### `npm run deploy-all` (hosted only)
+
+Deploy both Firebase hosting and Firebase functions. In future, these can be deployed separately as required. Run `npm deploy` from this main directory for hosting or the same script from the `functions` directory to deploy functions.
+
+
 **Now the backend needs to be set up.**
 
 ### `cd backend`
