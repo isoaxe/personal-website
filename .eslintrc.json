@@ -18,5 +18,7 @@
         "react"
     ],
     "rules": {
+      "semi": ["warn", "always"],
+      "no-multiple-empty-lines": ["warn", { "max": 2, "maxBOF": 0, "maxEOF": 0 }]
     }
 }
