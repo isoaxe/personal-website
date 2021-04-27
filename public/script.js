@@ -1,9 +1,9 @@
-//navElements returns an array nav anchor tags.
-navElements = document.getElementById("navbar").getElementsByTagName("*");
+// navElements returns an array nav anchor tags.
+const navElements = document.getElementById("navbar").getElementsByTagName("*");
 
 // Expand or contract the dropdown navbar on small screens.
-function toggleExpand() {
-  let navbar = document.getElementById("navbar");
+function toggleExpand () {
+  const navbar = document.getElementById("navbar");
   if (navbar.className === "topnav") {
     navbar.className += " expand";
   } else {
@@ -12,7 +12,7 @@ function toggleExpand() {
 }
 
 // Helper: Highlights the navbar element based on supplied argument.
-function highlightNavElement(element) {
+function highlightNavElement (element) {
   switch (element) {
     case "home":
       clearNavHighlights();
@@ -38,15 +38,15 @@ function highlightNavElement(element) {
 }
 
 // Helper: Clears all navbar elements of highlighting.
-function clearNavHighlights() {
-  for (i = 0; i < (navElements.length - 2); i++) {
+function clearNavHighlights () {
+  for (let i = 0; i < (navElements.length - 2); i++) {
     navElements[i].className = "";
   }
 }
 
 // Checks the page position and calls highlightNavElement() based on this.
-function checkPagePosition() {
-  //Gives a number that turns negative once the top of the element passes the top of the viewport.
+function checkPagePosition () {
+  // Gives a number that turns negative once the top of the element passes the top of the viewport.
   const home = document.getElementById("home").getBoundingClientRect().top;
   const education = document.getElementById("education").getBoundingClientRect().top;
   const tech = document.getElementById("tech").getBoundingClientRect().top;
@@ -61,14 +61,14 @@ function checkPagePosition() {
   } else if (education < 1) {
     highlightNavElement("education");
   } else {
-    highlightNavElement("home")
+    highlightNavElement("home");
   }
 }
 
-window.onscroll = () => {checkPagePosition()};
+window.onscroll = () => { checkPagePosition(); };
 
 // Contact form validation of user input.
-function validateForm() {
+function validateForm () {
   const name = document.forms["contact"]["name"].value;
   const email = document.forms["contact"]["email"].value;
   const message = document.forms["contact"]["message"].value;
@@ -80,7 +80,7 @@ function validateForm() {
     document.getElementById("name").style.outline = "medium solid red";
     document.getElementById("name").placeholder = "Please enter your name here";
   }
-  if (email.indexOf('@') === -1) {
+  if (email.indexOf("@") === -1) {
     document.getElementById("email").style.outline = "medium solid red";
     document.getElementById("email").value = "";
     document.getElementById("email").placeholder = "Valid emails must contain an '@' symbol";
@@ -100,7 +100,7 @@ function validateForm() {
   if (name !== "") {
     document.getElementById("name").style.outline = 0;
   }
-  if (email.indexOf('@') !== -1) {
+  if (email.indexOf("@") !== -1) {
     document.getElementById("email").style.outline = 0;
   }
   if (message !== "") {
@@ -111,7 +111,7 @@ function validateForm() {
   }
 
   // If all fields pass, then return true so message can be sent.
-  if (name !== "" && email.indexOf('@') !== -1 && message !== "" && (checkbox1 && !checkbox2)) {
+  if (name !== "" && email.indexOf("@") !== -1 && message !== "" && (checkbox1 && !checkbox2)) {
     alert("Message sent! \n\nYou have also been sent a copy. \nCheck your junk mail folder if not found.");
     return true;
   }
