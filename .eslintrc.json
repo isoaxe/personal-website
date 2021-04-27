@@ -20,6 +20,7 @@
     "ignorePatterns": ["development.js", "production.js"],
     "rules": {
       "semi": ["warn", "always"],
+      "quotes": ["warn", "double"],
       "no-multiple-empty-lines": ["warn", { "max": 2, "maxBOF": 0, "maxEOF": 0 }]
     }
 }
