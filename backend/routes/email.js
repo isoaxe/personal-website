@@ -4,22 +4,22 @@ const router = express.Router();
 
 router.post("/submit", (req, res, next) => {
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    service: "gmail",
     auth: {
-      user: 'businessemailrouter@gmail.com',
-      pass: 'bizmailrouter209'
+      user: "businessemailrouter@gmail.com",
+      pass: "bizmailrouter209"
     }
   });
 
   const myEmail = {
-    to: 'lucasoconnell4@gmail.com',
+    to: "lucasoconnell4@gmail.com",
     subject: `A new message from ${req.body.name}`,
     text: `${req.body.name} sent the following message: \n\n ${req.body.message} \n\n Senders email: ${req.body.email}`
   };
 
   const sendersEmail = {
     to: req.body.email,
-    subject: `A copy of your message to Lucas`,
+    subject: "A copy of your message to Lucas",
     text: `You just sent Lucas the following message:\n\n${req.body.message}`
   };
 

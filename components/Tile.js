@@ -1,22 +1,21 @@
-const React = require('react');
-const ReactDOM = require('react-dom');
-const makeCarousel = require('react-reveal/makeCarousel');
-const Bounce = require('react-reveal/Bounce');
-const Reveal = require('react-reveal/Reveal');
-const Slide = require('react-reveal/Slide');
-const DOMPurify = require('dompurify');
-const renderHTML = require('react-render-html');
-const styled = require('styled-components');
-'use strict';
+const React = require("react");
+const ReactDOM = require("react-dom");
+const makeCarousel = require("react-reveal/makeCarousel");
+const Bounce = require("react-reveal/Bounce");
+const Reveal = require("react-reveal/Reveal");
+const Slide = require("react-reveal/Slide");
+const DOMPurify = require("dompurify");
+const renderHTML = require("react-render-html");
+const styled = require("styled-components");
 
-const tileSelector = require('../util/tileSelector.js');
+const tileSelector = require("../util/tileSelector.js");
 
 const styledTag = styled.default;
 const css = styled.css;
 const TEN_HOURS = 36000000; // 36 million ms = 10 hours.
 
 
-function Tile(props) {
+function Tile (props) {
   const [hover, setHover] = React.useState(false);
   const id = Number(props.id);
 
@@ -44,7 +43,7 @@ function Tile(props) {
     align-items: center;
     flex-direction: column;
     height: 100%;
-  `
+  `;
   const ArrowImg = styledTag.img`
     position: relative;
     cursor: pointer;
@@ -52,7 +51,7 @@ function Tile(props) {
     width: 15%;
     z-index: 2;
     ${props => props.hover ? css`visibility: visible;` : css`visibility: hidden;`}
-  `
+  `;
 
   const CarouselUI = ({ position, total, handleClick, children }) => (
     <Container hover={hover}>
@@ -63,20 +62,20 @@ function Tile(props) {
   const Carousel = makeCarousel(CarouselUI);
 
   // Add hook to automatically open link in new page.
-  DOMPurify.addHook('afterSanitizeAttributes', function(node) {
+  DOMPurify.addHook("afterSanitizeAttributes", function (node) {
     // set all elements owning target to target=_blank
-    if ('target' in node) {
-      node.setAttribute('target', '_blank');
-      node.setAttribute('rel', 'noopener noreferrer');
+    if ("target" in node) {
+      node.setAttribute("target", "_blank");
+      node.setAttribute("rel", "noopener noreferrer");
     }
   });
 
   // Sanatize HTML to prevent possibility of XSS attacks.
-  let tile2Clean = DOMPurify.sanitize(tileSelector(id, 2), {USE_PROFILES: {html: true}});
-  let tile3Clean = DOMPurify.sanitize(tileSelector(id, 3), {USE_PROFILES: {html: true}});
+  const tile2Clean = DOMPurify.sanitize(tileSelector(id, 2), { USE_PROFILES: { html: true } });
+  const tile3Clean = DOMPurify.sanitize(tileSelector(id, 3), { USE_PROFILES: { html: true } });
 
-  function staggeredDelay() {
-    switch(id) {
+  function staggeredDelay () {
+    switch (id) {
       case 0: return 0;
       case 1: return 150;
       case 2: return 300;
@@ -114,7 +113,7 @@ function Tile(props) {
 }
 
 // Find all appropriate DOM containers, and render Tile components into them.
-document.querySelectorAll('.tile-container')
+document.querySelectorAll(".tile-container")
   .forEach(domContainer => {
     const id = domContainer.dataset.id;
     ReactDOM.render(<Tile id={id} />, domContainer);

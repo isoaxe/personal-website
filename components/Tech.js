@@ -1,9 +1,9 @@
-const React = require('react');
-const ReactDOM = require('react-dom');
-const Zoom = require('react-reveal/Zoom');
-'use strict';
+const React = require("react");
+const ReactDOM = require("react-dom");
+const Zoom = require("react-reveal/Zoom");
 
-function screenSize() {
+
+function screenSize () {
   if (window.screen.width > 800) {
     return "media/tech.png";
   } else {
@@ -11,7 +11,7 @@ function screenSize() {
   }
 }
 
-function Tech() {
+function Tech () {
   return (
     <div>
       <Zoom delay={1000}>
@@ -22,7 +22,7 @@ function Tech() {
 }
 
 // Find appropriate DOM container, and render Tech component into it.
-document.querySelectorAll('.tech-container')
+document.querySelectorAll(".tech-container")
   .forEach(domContainer => {
     ReactDOM.render(<Tech />, domContainer);
   });
