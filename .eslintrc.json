@@ -17,7 +17,7 @@
     "plugins": [
         "react"
     ],
-    "ignorePatterns": ["development.js", "production.js"],
+    "ignorePatterns": ["development.js", "production.js", "preprocessed/*.js"],
     "rules": {
       "semi": ["warn", "always"],
       "quotes": ["warn", "double"],
