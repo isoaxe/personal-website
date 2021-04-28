@@ -1,10 +1,9 @@
-const React = require('react');
-const ReactDOM = require('react-dom');
-const LightSpeed = require('react-reveal/LightSpeed');
-'use strict';
+const React = require("react");
+const ReactDOM = require("react-dom");
+const LightSpeed = require("react-reveal/LightSpeed");
 
 
-function Title(props) {
+function Title (props) {
   return (
     <div>
       <LightSpeed left>
@@ -15,7 +14,7 @@ function Title(props) {
 }
 
 // Find all appropriate DOM containers, and render Title components into them.
-document.querySelectorAll('.title-container')
+document.querySelectorAll(".title-container")
   .forEach(domContainer => {
     const text = domContainer.dataset.text;
     ReactDOM.render(<Title text={text} />, domContainer);
