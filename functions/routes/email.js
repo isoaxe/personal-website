@@ -7,8 +7,8 @@ router.post("/submit", (req, res) => {
     service: "gmail",
     auth: {
       user: "businessemailrouter@gmail.com",
-      pass: "bizmailrouter209",
-    },
+      pass: "bizmailrouter209"
+    }
   });
 
   const myEmail = {
@@ -16,13 +16,13 @@ router.post("/submit", (req, res) => {
     subject: `A new message from ${req.body.name}`,
     text: `${req.body.name} sent the following message:
           \n\n ${req.body.message}
-          \n\n Senders email: ${req.body.email}`,
+          \n\n Senders email: ${req.body.email}`
   };
 
   const sendersEmail = {
     to: req.body.email,
     subject: "A copy of your message to Lucas",
-    text: `You just sent Lucas the following message:\n\n${req.body.message}`,
+    text: `You just sent Lucas the following message:\n\n${req.body.message}`
   };
 
   transporter.sendMail(myEmail);
