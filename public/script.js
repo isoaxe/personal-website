@@ -2,6 +2,8 @@
 const navElements = document.getElementById("navbar").getElementsByTagName("*");
 
 // Expand or contract the dropdown navbar on small screens.
+// This function is called from index.html and thus is not used in this file.
+/* eslint-disable-next-line */
 function toggleExpand () {
   const navbar = document.getElementById("navbar");
   if (navbar.className === "topnav") {
@@ -47,7 +49,6 @@ function clearNavHighlights () {
 // Checks the page position and calls highlightNavElement() based on this.
 function checkPagePosition () {
   // Gives a number that turns negative once the top of the element passes the top of the viewport.
-  const home = document.getElementById("home").getBoundingClientRect().top;
   const education = document.getElementById("education").getBoundingClientRect().top;
   const tech = document.getElementById("tech").getBoundingClientRect().top;
   const projects = document.getElementById("projects").getBoundingClientRect().top;
@@ -68,12 +69,14 @@ function checkPagePosition () {
 window.onscroll = () => { checkPagePosition(); };
 
 // Contact form validation of user input.
+// This function is called from index.html and thus is not used in this file.
+/* eslint-disable-next-line */
 function validateForm () {
-  const name = document.forms["contact"]["name"].value;
-  const email = document.forms["contact"]["email"].value;
-  const message = document.forms["contact"]["message"].value;
-  const checkbox1 = document.forms["contact"]["checkbox1"].checked;
-  const checkbox2 = document.forms["contact"]["checkbox2"].checked;
+  const name = document.forms.contact.name.value;
+  const email = document.forms.contact.email.value;
+  const message = document.forms.contact.message.value;
+  const checkbox1 = document.forms.contact.checkbox1.checked;
+  const checkbox2 = document.forms.contact.checkbox2.checked;
 
   // Check each field for valid input.
   if (name === "") {
