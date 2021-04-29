@@ -75,8 +75,6 @@ function validateForm () {
   const name = document.forms.contact.name.value;
   const email = document.forms.contact.email.value;
   const message = document.forms.contact.message.value;
-  const checkbox1 = document.forms.contact.checkbox1.checked;
-  const checkbox2 = document.forms.contact.checkbox2.checked;
 
   // Check each field for valid input.
   if (name === "") {
@@ -95,9 +93,6 @@ function validateForm () {
     document.getElementById("message").style.outline = "medium solid red";
     document.getElementById("message").placeholder = "Please enter your message here";
   }
-  if ((checkbox1 && !checkbox2) === false) {
-    document.getElementById("checkbox-label").style.color = "red";
-  }
 
   // Remove red box around fields where valid input has been entered on next submission.
   if (name !== "") {
@@ -109,12 +104,9 @@ function validateForm () {
   if (message !== "") {
     document.getElementById("message").style.outline = 0;
   }
-  if (checkbox1 && !checkbox2) {
-    document.getElementById("checkbox-label").style.color = "white";
-  }
 
   // If all fields pass, then return true so message can be sent.
-  if (name !== "" && email.indexOf("@") !== -1 && message !== "" && (checkbox1 && !checkbox2)) {
+  if (name !== "" && email.indexOf("@") !== -1 && message !== "") {
     alert("Message sent! \n\nYou have also been sent a copy. \nCheck your junk mail folder if not found.");
     return true;
   }
