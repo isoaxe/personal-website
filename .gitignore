@@ -7,12 +7,6 @@ production.js
 node_modules/
 preprocessed/
 
-# Namecheap:
-.htaccess
-.well-known/
-backend/tmp/
-nc_assets/
-
 # Firebase:
 .firebase/
 firebase-debug.log
