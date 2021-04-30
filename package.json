@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "firebase emulators:start",
+    "lint": "npx eslint .",
     "babel": "npx babel --watch components --out-dir preprocessed --presets react-app/prod",
     "browserify": "browserify preprocessed/*.js -o development.js",
     "watchify": "watchify preprocessed/*.js -o development.js",
