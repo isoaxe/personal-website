@@ -25,10 +25,6 @@ In the **personal-website directory**, run the following commands:
 
 Install all of the Node dependencies for React and other third party packages used in the frontend.
 
-### `mkdir preprocessed`
-
-Generate a new directory called 'preprocessed' for the next step.
-
 ### `npm run babel`
 
 This runs a script in the package.json file that preprocesses all of the JSX files within the components directory and writes them to the preprocessed directory. These preprocessed files are then readable by the browser as plain JavaScript.
