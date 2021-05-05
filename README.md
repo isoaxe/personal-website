@@ -62,7 +62,11 @@ By default the `production.js` script is loaded. Any changes made to the codebas
 
 ### `npm install -g firebase-tools`
 
-After setting up the [Firebase project](https://firebase.google.com/), install the Firebase CLI. You will also need to [login](https://firebase.google.com/docs/cli#sign-in-test-cli) and link this project to the remote.
+After setting up the [Firebase project](https://firebase.google.com/), install the Firebase CLI.
+
+### `firebase login`
+
+You will also need to [login](https://firebase.google.com/docs/cli#sign-in-test-cli) and link this project to the remote, which will be your Google account.
 
 ### `cd functions`
 
