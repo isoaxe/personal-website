@@ -35,13 +35,9 @@ This runs a script in the package.json file that preprocesses all of the JSX fil
 
 Hint: Hold ctrl-c a few seconds after running this command to resume control of the command line. Control will not automatically be returned since the script watches for changes in the code and re-preprocesses on an ad-hoc basis. If you plan on editing the codebase, it's best to keep this running and proceeding with the following steps in another shell tab.
 
-### `npm install -g browserify`
-
-Install Browserify globally which bundles dependencies and allows us to `require('module')` from the browser as is done with Node. This means that third-party Node modules can be used that were unavailable via `<script>` import in the HTML file.
-
 ### `npm run browserify`
 
-Run the Browserify script in the package.json file. This bundles all of the components from the preprocessed directory into a single `development.js` file. This bundling occurs only when running the script, so any changes to the components will mean that the script will need to be run again to be reflected in the browser, unless the following optional steps are taken.
+Run the Browserify script in the package.json file. Browserify allows us to `require('module')` from the browser as is done with Node. This script bundles all of the components from the preprocessed directory into a single `development.js` file. This bundling occurs only when running the script, so any changes to the components will mean that the script will need to be run again to be reflected in the browser, unless the following optional steps are taken.
 
 ### `npm install -g watchify` (optional)
 
