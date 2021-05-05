@@ -33,7 +33,7 @@ Hint: Hold ctrl-c a few seconds after running this command to resume control of 
 
 ### `npm run browserify`
 
-Run the Browserify script in the package.json file. Browserify allows us to `require('module')` from the browser as is done with Node. This script bundles all of the components from the preprocessed directory into a single `development.js` file. This bundling occurs only when running the script, so any changes to the components will mean that the script will need to be run again to be reflected in the browser, unless the following optional steps are taken.
+Run the Browserify script in the package.json file. Browserify allows us to `require('module')` from the browser as is done with Node. This script bundles all of the components from the preprocessed directory into a single `development.js` file. This bundling occurs only when running the script, so any changes to the components will mean that the script will need to be run again to be reflected in the browser, unless the following optional step is taken.
 
 ### `npm run watchify` (optional)
 
