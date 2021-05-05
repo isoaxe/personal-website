@@ -39,13 +39,9 @@ Hint: Hold ctrl-c a few seconds after running this command to resume control of 
 
 Run the Browserify script in the package.json file. Browserify allows us to `require('module')` from the browser as is done with Node. This script bundles all of the components from the preprocessed directory into a single `development.js` file. This bundling occurs only when running the script, so any changes to the components will mean that the script will need to be run again to be reflected in the browser, unless the following optional steps are taken.
 
-### `npm install -g watchify` (optional)
-
-Install Watchify globally which works with Browserify and monitors for changes in the components. This is optional - if just cloning and running this repo then it is not necessary. The previous `browserify` script can be run each time a change is made instead. However for continued work, installing Watchify will speed up the process.
-
 ### `npm run watchify` (optional)
 
-Run the Watchify script in the package.json file. This monitors the preprocessed components for change and rebundles as necessary. Leave this running in a seperate shell tab. If the `watchify` script is used, then running `npm run browserify` is no longer necessary.
+Run the Watchify script in the package.json file. This does the same thing as Browserify, except it continually monitors the preprocessed components for change and rebundles as necessary rather than running just once. It is therefore ideal if continually working on the project rather than building without much modification. Leave this running in a separate shell tab. If the `watchify` script is used, then the `browserify` script is no longer necessary.
 
 ### `npm run build`
 
