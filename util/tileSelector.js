@@ -85,9 +85,9 @@ function tileSelector (id, slide) {
         return "media/generic-web-app.png";
       } else if (slide === 2) {
         return `
-        <h5>Condo Management App</h5>
-        <h5>Front end was built with React / Redux while the back end was done using Firebase</h5>
-        <p>Test out the <a href="/condo" target="_blank">app</a></p>
+        <h5>Onit</h5>
+        <h5>Condo management app programmed using TypeScript. Front end was built with React & Redux while the API was made using the Express framework and managed via the serverless architecture provided by Firebase functions.</h5>
+        <p>Test out the <a href="https://onit-landing.web.app/" target="_blank">app</a></p>
         `;
       } else {
         return `
