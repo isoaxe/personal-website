@@ -58,11 +58,11 @@ By default the `production.js` script is loaded. Any changes made to the codebas
 
 **Now the backend functions need to be set up.**
 
-*Note:* This requires the setting up of a Firebase project (hosting and functions). If you want to host someplace else or simply want to test locally, it's best to use the alternative method below.
+*Note:* This requires the setting up of a [Firebase project](https://firebase.google.com/) (hosting and functions), which is not covered here. If you want to host someplace else or simply want to test locally, it's best to use the alternative method below.
 
 ### `npm install -g firebase-tools`
 
-After setting up the [Firebase project](https://firebase.google.com/), install the Firebase CLI.
+After setting up the Firebase project, install the Firebase CLI.
 
 ### `firebase login`
 
