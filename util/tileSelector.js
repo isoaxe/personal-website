@@ -82,7 +82,7 @@ function tileSelector (id, slide) {
       }
     case 5:
       if (slide === 1) {
-        return "media/generic-web-app.png";
+        return "media/onit.png";
       } else if (slide === 2) {
         return `
         <h5>Onit</h5>
