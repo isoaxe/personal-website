@@ -92,7 +92,7 @@ function tileSelector (id, slide) {
       } else {
         return `
         <p>This app allows condo management companies to track and assign tasks that need to be completed for residents. For example, watering of plants and feeding of pets can be scheduled for when residents are gone on holidays.</p>
-        <p>Find out more on the <a href="https://github.com/Isoaxe/space-invaders" target="_blank">GitHub</a> readme.</p>
+        <p>Find out more on the GitHub <a href="https://github.com/Isoaxe/onit" target="_blank">readme</a></p>
         `;
       }
     case 6:
