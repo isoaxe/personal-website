@@ -11,6 +11,7 @@
     "browserify": "browserify preprocessed/*.js -o development.js",
     "watchify": "watchify preprocessed/*.js -o development.js",
     "build": "browserify development.js -g [ envify --NODE_ENV production ] -g uglifyify | terser --compress --mangle > ./public/production.js",
+    "get-env": "firebase functions:config:get",
     "deploy-all": "firebase deploy",
     "deploy": "firebase deploy --only hosting"
   },
