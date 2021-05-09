@@ -62,6 +62,10 @@ After setting up the Firebase project, install the Firebase CLI.
 
 You will also need to [login](https://firebase.google.com/docs/cli#sign-in-test-cli) and link this project to the remote, which will be your Google account.
 
+### `firebase functions:config:set email_router.email=EMAIL_ADDRESS email_router.password=EMAIL_PASSWORD`
+
+[Set](https://firebase.google.com/docs/functions/config-env) the Firebase environment variables for the router email address and password. These are implemented in `email.js` but require configuration first. EMAIL_ADDRESS and EMAIL_PASSWORD in this script should be replaced with the secret address and password that have previously been created for the email router (see note above).
+
 ### `cd functions`
 
 Navigate to the functions folder in a new shell tab to set up the server.
