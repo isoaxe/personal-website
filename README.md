@@ -78,6 +78,10 @@ Navigate to the functions folder in a new shell tab to set up the server.
 
 Install all of the Node dependencies for Express and other third party packages used by Firebase functions.
 
+### `npm run set-config` (local only)
+
+Run the `set-config` script that fetches the previously written environment variables and writes them to the `.runtimeconfig.json` file for local reference.
+
 ### `cd .. && npm run serve` (local only)
 
 Move up to the main directory again and run the `serve` script. This starts both the hosting and functions emulators for local testing. The hosted site and function logs can then be viewed in the [browser](http://localhost:4000).
