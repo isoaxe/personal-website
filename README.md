@@ -66,6 +66,10 @@ You will also need to [login](https://firebase.google.com/docs/cli#sign-in-test-
 
 [Set](https://firebase.google.com/docs/functions/config-env) the Firebase environment variables for the router email address and password. These are implemented in `email.js` but require configuration first. EMAIL_ADDRESS and EMAIL_PASSWORD in this script should be replaced with the secret address and password that have previously been created for the email router (see note above).
 
+### `npm run get-keys`
+
+First follow the steps in the Firebase [documentation](https://firebase.google.com/docs/functions/local-emulator#set_up_admin_credentials_optional) to download the private keys from the Service Accounts pane of the Google Cloud console. Then change the [get-keys](https://github.com/Isoaxe/personal-website/blob/master/package.json) script to reflect the local path where the keys are stored and the correct filename of the keys at that location. Finally, run the script.
+
 ### `cd functions`
 
 Navigate to the functions folder in a new shell tab to set up the server.
