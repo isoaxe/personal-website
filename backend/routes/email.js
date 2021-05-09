@@ -6,8 +6,8 @@ router.post("/submit", (req, res, next) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "businessemailrouter@gmail.com",
-      pass: "bizmailrouter209"
+      user: "[insertRouterEmailAddress]",
+      pass: "[insertRouterEmailPassword]"
     }
   });
 
