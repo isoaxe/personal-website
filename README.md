@@ -101,6 +101,10 @@ Navigate to the backend folder in a new shell tab to set up the server.
 
 Install all of the Node dependencies for Express and other third party packages used in the backend.
 
+### Set email router credentials
+
+Hardcode the 'user' and 'pass' field values for the authentication of the email router in [`email.js`](https://github.com/Isoaxe/personal-website/blob/master/backend/routes/email.js). See note above the Firebase functions section in this document.
+
 ### `npm start`
 
 Spins up a server, either locally or hosted. If done in the local environment, open [http://localhost:3000](http://localhost:3000) to view it in the browser.
