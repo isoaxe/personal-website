@@ -48,11 +48,16 @@ This takes the `development.js` file and converts it into `production.js` by run
 By default the `production.js` script is loaded. Any changes made to the codebase will not be updated until the relatively time-consuming `build` is run again. Therefore for development purposes, comment out that script in `index.html` and uncomment the `development.js` script so that is used instead. This way, the page will reload if you make edits to files in the backend folder without having to run the build each time. You will also see any lint errors in the console.
 
 
+--------------------------------
+
 **Now the backend functions need to be set up.**
 
 *Note:* This requires the setting up of a [Firebase project](https://firebase.google.com/) (hosting and functions), which is not covered here. If you want to host someplace else or simply want to test locally, it's best to use the alternative method below.
 
 *Note:* In order for the contact form to work, a dedicated gmail account will be required to route queries posted via the form to you and to the sender. When setting up the email account, both [less secure apps](https://myaccount.google.com/lesssecureapps) and [display unlock captcha](https://accounts.google.com/DisplayUnlockCaptcha) need to be enabled for Nodemailer not to be blocked by Google.
+
+
+--------------------------------
 
 ### `npm install -g firebase-tools`
 
@@ -90,6 +95,8 @@ Move up to the main directory again and run the `serve` script. This starts both
 
 Deploy both Firebase hosting and Firebase functions. In future, these can be deployed separately as required. Run `npm deploy` from this main directory for hosting or the same script from the `functions` directory to deploy functions.
 
+
+--------------------------------
 
 **Alternative to Firebase functions: Create Node server.**
 
