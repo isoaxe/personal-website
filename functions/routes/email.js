@@ -1,3 +1,4 @@
+const functions = require('firebase-functions');
 const nodemailer = require("nodemailer");
 const express = require("express");
 const router = express.Router();
@@ -6,8 +7,8 @@ router.post("/submit", (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "businessemailrouter@gmail.com",
-      pass: "bizmailrouter209"
+      user: functions.config().email_router.email,
+      pass: functions.config().email_router.password
     }
   });
 
