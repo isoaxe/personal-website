@@ -69,7 +69,7 @@ You will also need to [login](https://firebase.google.com/docs/cli#sign-in-test-
 
 ### `firebase functions:config:set email_router.email=EMAIL_ADDRESS email_router.password=EMAIL_PASSWORD`
 
-[Set](https://firebase.google.com/docs/functions/config-env) the Firebase environment variables for the router email address and password. These are implemented in `email.js` but require configuration first. EMAIL_ADDRESS and EMAIL_PASSWORD in this script should be replaced with the secret address and password that have previously been created for the email router (see note above).
+[Set](https://firebase.google.com/docs/functions/config-env) the Firebase environment variables for the router email address and password. These are implemented in `email.js` but require configuration first. `EMAIL_ADDRESS` and `EMAIL_PASSWORD` in this script should be replaced with the secret address and password that have previously been created for the email router (see note above).
 
 ### `npm run get-keys` (local only)
 
@@ -77,7 +77,7 @@ First follow the steps in the Firebase [documentation](https://firebase.google.c
 
 ### `cd functions`
 
-Navigate to the functions folder in a new shell tab to set up the server.
+Navigate to the functions folder in a new shell tab to complete configuration of Firebase functions.
 
 ### `npm install`
 
@@ -93,7 +93,7 @@ Move up to the main directory again and run the `serve` script. This starts both
 
 ### `npm run deploy-all` (hosted only)
 
-Deploy both Firebase hosting and Firebase functions. In future, these can be deployed separately as required. Run `npm deploy` from this main directory for hosting or the same script from the `functions` directory to deploy functions.
+Deploy both Firebase hosting and Firebase functions from the root directory. In future, these can be deployed separately as required. Run `npm deploy` from this main directory for hosting or the same script from the `functions` directory to deploy functions.
 
 
 --------------------------------
