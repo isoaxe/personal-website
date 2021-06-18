@@ -1,4 +1,4 @@
-const functions = require('firebase-functions');
+const functions = require("firebase-functions");
 const nodemailer = require("nodemailer");
 const express = require("express");
 const router = express.Router();
