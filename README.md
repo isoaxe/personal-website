@@ -73,7 +73,7 @@ You will also need to [login](https://firebase.google.com/docs/cli#sign-in-test-
 
 ### `npm run get-keys` (local only)
 
-First follow the steps in the Firebase [documentation](https://firebase.google.com/docs/functions/local-emulator#set_up_admin_credentials_optional) to download the private keys from the Service Accounts pane of the Google Cloud console. Then change the [get-keys](https://github.com/Isoaxe/personal-website/blob/master/package.json) script to reflect the local path where the keys are stored and the correct filename of the keys at that location. Finally, run the script.
+First follow the steps in the Firebase [documentation](https://firebase.google.com/docs/functions/local-emulator#set_up_admin_credentials_optional) to download the private keys from the Service Accounts pane of the Google Cloud console. Then change the [get-keys](https://github.com/Isoaxe/personal-website/blob/master/package.json#L15) script to reflect the local path where the keys are stored and the correct filename of the keys at that location. Finally, run the script.
 
 ### `cd functions`
 
@@ -110,7 +110,7 @@ Install all of the Node dependencies for Express and other third party packages 
 
 ### Set email router credentials
 
-Hardcode the 'user' and 'pass' field values for the authentication of the email router in [`email.js`](https://github.com/Isoaxe/personal-website/blob/master/backend/routes/email.js). See note above the Firebase functions section in this document.
+Hardcode the 'user' and 'pass' field values for the authentication of the email router in [`email.js`](https://github.com/Isoaxe/personal-website/blob/master/backend/routes/email.js#L9-L10). See note above the Firebase functions section in this document.
 
 ### `npm start`
 
