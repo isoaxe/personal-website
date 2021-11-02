@@ -91,7 +91,7 @@ Run the `set-config` script that fetches the previously written environment vari
 
 Move up to the main directory again and run the `serve` script. This starts both the hosting and functions emulators for local testing. The hosted site and function logs can then be viewed in the [browser](http://localhost:4000).
 
-### `npm run dev`
+### `npm run dev` (local only)
 
 After the project has been set up, the `dev` script can be run to save time. This executes the `babel`, `watchify` and `serve` scripts simultaneously. It is the only command that needs to be run before developing locally.
 
