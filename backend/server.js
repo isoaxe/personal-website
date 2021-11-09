@@ -11,9 +11,9 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 
 /* The root directory is the 'backend' folder. This needs to be set to the
-   true root (up one level) in order for files to reference correctly in
+   public directory in order for files to reference correctly in
    the local node server (localhost:3000) */
-app.use("/", express.static(path.join(rootDir, "..")));
+app.use("/", express.static(path.join(rootDir, "../public")));
 
 app.use(homeRoute);
 app.use(emailRoute);
