@@ -5,6 +5,7 @@ const express = require("express");
 const router = express.Router();
 
 router.post("/submit", async (req, res) => {
+  // Set Nodemailer configuration, auth and email details.
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -27,6 +28,7 @@ router.post("/submit", async (req, res) => {
     text: `You just sent Lucas the following message:\n\n${req.body.message}`
   };
 
+  // Call reCaptcha api to verify user.
   const responseKey = req.body["g-recaptcha-response"];
   const secretKey = "6LfeSREdAAAAANliAluUdtgpT2V5CkVhGddr5xxQ";
   const url =
@@ -35,6 +37,7 @@ router.post("/submit", async (req, res) => {
   const googleRes = await fetch(url);
   const captchaRes = await googleRes.json();
 
+  // Send message if user is verified as not a bot.
   if (captchaRes.success) {
     transporter.sendMail(myEmail);
     transporter.sendMail(sendersEmail);
