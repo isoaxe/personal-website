@@ -1,9 +1,10 @@
 const functions = require("firebase-functions");
 const nodemailer = require("nodemailer");
+const fetch = require("isomorphic-fetch");
 const express = require("express");
 const router = express.Router();
 
-router.post("/submit", (req, res) => {
+router.post("/submit", async (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -26,10 +27,21 @@ router.post("/submit", (req, res) => {
     text: `You just sent Lucas the following message:\n\n${req.body.message}`
   };
 
-  transporter.sendMail(myEmail);
-  transporter.sendMail(sendersEmail);
+  const responseKey = req.body["g-recaptcha-response"];
+  const secretKey = "6LfeSREdAAAAANliAluUdtgpT2V5CkVhGddr5xxQ";
+  const url =
+`https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${responseKey}`;
 
-  res.redirect("/#contact");
+  const googleRes = await fetch(url);
+  const captchaRes = await googleRes.json();
+
+  if (captchaRes.success) {
+    transporter.sendMail(myEmail);
+    transporter.sendMail(sendersEmail);
+    res.redirect("/#contact");
+  } else {
+    res.send({ response: "reCaptcha verification failed" });
+  }
 });
 
 module.exports = router;
