@@ -1,3 +1,5 @@
+let captchaCorrect = false;
+
 // navElements returns an array nav anchor tags.
 const navElements = document.getElementById("navbar").getElementsByTagName("*");
 
@@ -68,6 +70,11 @@ function checkPagePosition () {
 
 window.onscroll = () => { checkPagePosition(); };
 
+/* eslint-disable-next-line */
+function correctCaptcha (response) {
+  captchaCorrect = true;
+};
+
 // Contact form validation of user input.
 // This function is called from index.html and thus is not used in this file.
 /* eslint-disable-next-line */
@@ -106,7 +113,7 @@ function validateForm () {
   }
 
   // If all fields pass, then return true so message can be sent.
-  if (name !== "" && email.indexOf("@") !== -1 && message !== "") {
+  if (name !== "" && email.indexOf("@") !== -1 && message !== "" && captchaCorrect) {
     alert("Message sent! \n\nYou have also been sent a copy. \nCheck your junk mail folder if not found.");
     return true;
   }
