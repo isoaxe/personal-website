@@ -75,6 +75,11 @@ function correctCaptcha (response) {
   captchaCorrect = true;
 };
 
+/* eslint-disable-next-line */
+function expiredCaptcha (response) {
+  captchaCorrect = false;
+};
+
 // Contact form validation of user input.
 // This function is called from index.html and thus is not used in this file.
 /* eslint-disable-next-line */
