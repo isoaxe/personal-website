@@ -43,7 +43,7 @@ router.post("/submit", async (req, res) => {
     transporter.sendMail(sendersEmail);
     res.redirect("/#contact");
   } else {
-    res.send({ response: "reCaptcha verification failed" });
+    res.send({ error: "reCaptcha verification failed. Your message was not sent. Please try again." });
   }
 });
 
