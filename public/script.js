@@ -112,6 +112,11 @@ function validateForm () {
     document.getElementById("message").style.outline = 0;
   }
 
+  // Let the user know that they need pass the captcha before form submission.
+  if (!captchaCorrect) {
+    alert("You need to prove your humanity first.\n\n Hint: It's a box ticking exercise.");
+  }
+
   // If all fields pass, then return true so message can be sent.
   if (name !== "" && email.indexOf("@") !== -1 && message !== "" && captchaCorrect) {
     alert("Message sent! \n\nYou have also been sent a copy. \nCheck your junk mail folder if not found.");
