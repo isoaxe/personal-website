@@ -188,6 +188,11 @@ a:link, a:visited {
   font-family: 'Nunito', sans-serif;
 }
 
+.g-recaptcha {
+  display: flex;
+  justify-content: center;
+}
+
 .coverLogo {
   display: flex;
   justify-content: center;
