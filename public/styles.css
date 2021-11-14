@@ -193,7 +193,7 @@ a:link, a:visited {
   justify-content: center;
 }
 
-.coverLogo {
+.cover-logo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -201,7 +201,7 @@ a:link, a:visited {
   background-color: #fff;
 }
 
-.coverLogo img {
+.cover-logo img {
   max-width: 380px;
   max-height: 250px;
 }
