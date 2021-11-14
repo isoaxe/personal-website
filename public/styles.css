@@ -188,7 +188,12 @@ a:link, a:visited {
   font-family: 'Nunito', sans-serif;
 }
 
-.coverLogo {
+.g-recaptcha {
+  display: flex;
+  justify-content: center;
+}
+
+.cover-logo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -196,7 +201,7 @@ a:link, a:visited {
   background-color: #fff;
 }
 
-.coverLogo img {
+.cover-logo img {
   max-width: 380px;
   max-height: 250px;
 }

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Nunito:wght@400;600&family=Lato:wght@300&display=swap" rel="stylesheet">
     <script type="text/javascript" src="./script.js" async></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
 
   <body>
@@ -83,6 +84,11 @@
           <input id="name" class="contact-user" type="text" placeholder="Name" name="name"><br>
           <input id="email" class="contact-user" type="text" placeholder="Email" name="email"><br>
           <textarea id="message" class="contact-message" placeholder="Message" name="message"></textarea><br>
+          <div class="g-recaptcha"
+               data-sitekey="6LfeSREdAAAAAGO14nqrqWFxEc03lAq47TbrNgL6"
+               data-callback="correctCaptcha"
+               data-expired-callback="expiredCaptcha">
+          </div>
           <button type="submit" class="submit">Submit</button>
         </form>
       </div>

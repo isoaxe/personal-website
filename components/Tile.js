@@ -92,7 +92,7 @@ function Tile (props) {
       <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
         <Carousel>
           <Reveal wait={TEN_HOURS}>
-            <div className='tile coverLogo'>
+            <div className='tile cover-logo'>
               <img src={tileSelector(id, 1)} />
             </div>
           </Reveal>
