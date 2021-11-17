@@ -27,7 +27,7 @@ function Tile (props) {
     position: relative;
     background-color: #9daba1;
     overflow: hidden;
-    margin: 5px;
+    margin: 10px;
     padding: 10px 0px;
     width: 32%;
     min-width: 380px;
