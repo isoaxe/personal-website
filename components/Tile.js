@@ -35,7 +35,7 @@ function Tile (props) {
     border-radius: 5px;
     text-align: center;
     height: 250px;
-    ${props => props.hover ? css`box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;` : css`box-shadow: none;`}
+    ${props => props.hover ? css`box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;` : css`box-shadow: none;`}
   `;
   const ArrowContainer = styledTag.div`
     display: flex;
