@@ -6,7 +6,7 @@ const Zoom = require("react-reveal/Zoom");
 function Contact () {
   return (
     <div>
-      <Zoom delay={1000}>
+      <Zoom delay={500}>
         <form action="/submit" method="POST" onSubmit="return validateForm()" name="contact">
           <input id="name" className="contact-user" type="text" placeholder="Name" name="name" /><br></br>
           <input id="email" className="contact-user" type="text" placeholder="Email" name="email" /><br></br>
