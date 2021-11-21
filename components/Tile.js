@@ -11,12 +11,10 @@ const styled = require("styled-components");
 const tileSelector = require("../util/tileSelector.js");
 
 const styledTag = styled.default;
-const css = styled.css;
 const TEN_HOURS = 36000000; // 36 million ms = 10 hours.
 
 
 function Tile (props) {
-  const [hover, setHover] = React.useState(false);
   const id = Number(props.id);
 
   const ArrowImg = styledTag.img`
@@ -64,9 +62,9 @@ function Tile (props) {
 
   const CarouselUI = ({ position, total, handleClick, children }) => (
     <Wrapper>
-      <Container hover={hover}>
+      <Container>
         {children}
-        <ArrowContainer><ArrowImg src='media/down-arrow.png' onClick={handleClick} data-position={position + 1} hover={hover} /></ArrowContainer>
+        <ArrowContainer><ArrowImg src='media/down-arrow.png' onClick={handleClick} data-position={position + 1} /></ArrowContainer>
       </Container>
     </Wrapper>
   );
@@ -100,7 +98,7 @@ function Tile (props) {
 
   return (
     <Slide bottom delay={400 + staggeredDelay()}>
-      <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+      <div>
         <Carousel>
           <Reveal wait={TEN_HOURS}>
             <div className='tile cover-logo'>
