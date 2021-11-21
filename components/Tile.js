@@ -25,7 +25,7 @@ function Tile (props) {
     padding: 10px;
     width: 15%;
     z-index: 2;
-    ${props => props.hover ? css`visibility: visible;` : css`visibility: hidden;`}
+    visibility: hidden;
   `;
   const ArrowContainer = styledTag.div`
     display: flex;
@@ -56,6 +56,9 @@ function Tile (props) {
       box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
       margin-top: -10px;
       transition: box-shadow 0.8s, margin-top 1s;
+    }
+    &:hover ${ArrowImg} {
+      visibility: visible;
     }
   `;
 
