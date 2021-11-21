@@ -35,7 +35,11 @@ function Tile (props) {
     border-radius: 5px;
     text-align: center;
     height: 250px;
-    ${props => props.hover ? css`box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;` : css`box-shadow: none;`}
+  `;
+  const Wrapper = styledTag.div`
+    &:hover ${Container} {
+      box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+    }
   `;
   const ArrowContainer = styledTag.div`
     display: flex;
@@ -54,10 +58,12 @@ function Tile (props) {
   `;
 
   const CarouselUI = ({ position, total, handleClick, children }) => (
-    <Container hover={hover}>
-      {children}
-      <ArrowContainer><ArrowImg src='media/down-arrow.png' onClick={handleClick} data-position={position + 1} hover={hover} /></ArrowContainer>
-    </Container>
+    <Wrapper>
+      <Container hover={hover}>
+        {children}
+        <ArrowContainer><ArrowImg src='media/down-arrow.png' onClick={handleClick} data-position={position + 1} hover={hover} /></ArrowContainer>
+      </Container>
+    </Wrapper>
   );
   const Carousel = makeCarousel(CarouselUI);
 
