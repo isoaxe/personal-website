@@ -19,6 +19,21 @@ function Tile (props) {
   const [hover, setHover] = React.useState(false);
   const id = Number(props.id);
 
+  const ArrowImg = styledTag.img`
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+    width: 15%;
+    z-index: 2;
+    ${props => props.hover ? css`visibility: visible;` : css`visibility: hidden;`}
+  `;
+  const ArrowContainer = styledTag.div`
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+  `;
   const Container = styledTag.div`
     display: flex;
     justify-content: center;
@@ -42,21 +57,6 @@ function Tile (props) {
       margin-top: -10px;
       transition: box-shadow 0.8s, margin-top 1s;
     }
-  `;
-  const ArrowContainer = styledTag.div`
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-direction: column;
-    height: 100%;
-  `;
-  const ArrowImg = styledTag.img`
-    position: relative;
-    cursor: pointer;
-    padding: 10px;
-    width: 15%;
-    z-index: 2;
-    ${props => props.hover ? css`visibility: visible;` : css`visibility: hidden;`}
   `;
 
   const CarouselUI = ({ position, total, handleClick, children }) => (
