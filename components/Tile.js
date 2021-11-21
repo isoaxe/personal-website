@@ -39,6 +39,7 @@ function Tile (props) {
   const Wrapper = styledTag.div`
     &:hover ${Container} {
       box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+      margin-top: -10px;
     }
   `;
   const ArrowContainer = styledTag.div`
