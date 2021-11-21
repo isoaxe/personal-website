@@ -14,7 +14,7 @@ function screenSize () {
 function Tech () {
   return (
     <div>
-      <Zoom delay={1000}>
+      <Zoom delay={800}>
         <img src={screenSize()} />
       </Zoom>
     </div>
