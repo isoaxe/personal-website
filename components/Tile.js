@@ -40,6 +40,7 @@ function Tile (props) {
     &:hover ${Container} {
       box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
       margin-top: -10px;
+      transition: box-shadow 0.8s, margin-top 1s;
     }
   `;
   const ArrowContainer = styledTag.div`
