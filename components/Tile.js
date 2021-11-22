@@ -15,6 +15,7 @@ const TEN_HOURS = 36000000; // 36 million ms = 10 hours.
 
 
 function Tile (props) {
+  const [reset, setReset] = React.useState(false);
   const id = Number(props.id);
 
   const ArrowImg = styledTag.img`
@@ -98,7 +99,11 @@ function Tile (props) {
 
   return (
     <Slide bottom delay={400 + staggeredDelay()}>
-      <div>
+      <div
+        onMouseEnter={() => setReset(true)}
+        onMouseLeave={() => setReset(false)}
+        reset={reset}
+      >
         <Carousel>
           <Reveal wait={TEN_HOURS}>
             <div className='tile cover-logo'>
