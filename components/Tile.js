@@ -11,31 +11,20 @@ const styled = require("styled-components");
 const tileSelector = require("../util/tileSelector.js");
 
 const styledTag = styled.default;
-const css = styled.css;
 const TEN_HOURS = 36000000; // 36 million ms = 10 hours.
 
 
 function Tile (props) {
-  const [hover, setHover] = React.useState(false);
+  const [reset, setReset] = React.useState(false);
   const id = Number(props.id);
 
-  const Container = styledTag.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  const ArrowImg = styledTag.img`
     position: relative;
-    background-color: #9daba1;
-    overflow: hidden;
-    margin: 5px;
-    padding: 10px 0px;
-    width: 32%;
-    min-width: 380px;
-    letter-spacing: 0.07em;
-    border-radius: 5px;
-    text-align: center;
-    height: 250px;
-    ${props => props.hover ? css`border: 3px solid #1e688f;` : css`border: 3px solid #fff;`}
+    cursor: pointer;
+    padding: 10px;
+    width: 15%;
+    z-index: 2;
+    visibility: hidden;
   `;
   const ArrowContainer = styledTag.div`
     display: flex;
@@ -44,20 +33,41 @@ function Tile (props) {
     flex-direction: column;
     height: 100%;
   `;
-  const ArrowImg = styledTag.img`
+  const Container = styledTag.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     position: relative;
-    cursor: pointer;
-    padding: 10px;
-    width: 15%;
-    z-index: 2;
-    ${props => props.hover ? css`visibility: visible;` : css`visibility: hidden;`}
+    background-color: #9daba1;
+    overflow: hidden;
+    margin: 10px;
+    padding: 10px 0px;
+    width: 32%;
+    min-width: 380px;
+    letter-spacing: 0.07em;
+    border-radius: 5px;
+    text-align: center;
+    height: 250px;
+  `;
+  const Wrapper = styledTag.div`
+    &:hover ${Container} {
+      box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+      margin-top: -10px;
+      transition: box-shadow 0.8s, margin-top 1s;
+    }
+    &:hover ${ArrowImg} {
+      visibility: visible;
+    }
   `;
 
   const CarouselUI = ({ position, total, handleClick, children }) => (
-    <Container hover={hover}>
-      {children}
-      <ArrowContainer><ArrowImg src='media/down-arrow.png' onClick={handleClick} data-position={position + 1} hover={hover} /></ArrowContainer>
-    </Container>
+    <Wrapper>
+      <Container>
+        {children}
+        <ArrowContainer><ArrowImg src='media/down-arrow.png' onClick={handleClick} data-position={position + 1} /></ArrowContainer>
+      </Container>
+    </Wrapper>
   );
   const Carousel = makeCarousel(CarouselUI);
 
@@ -89,7 +99,11 @@ function Tile (props) {
 
   return (
     <Slide bottom delay={400 + staggeredDelay()}>
-      <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+      <div
+        onMouseEnter={() => setReset(true)}
+        onMouseLeave={() => setReset(false)}
+        reset={reset}
+      >
         <Carousel>
           <Reveal wait={TEN_HOURS}>
             <div className='tile cover-logo'>
