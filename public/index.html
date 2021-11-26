@@ -80,6 +80,17 @@
       <div class="container">
         <div class="title title-container" data-text="- Contact -"></div>
         <h4 class="contact-text">Questions? Send me a message below.</h4>
+        <form action="/submit" method="POST" onSubmit="return validateForm()" name="contact">
+          <input id="name" class="contact-user" type="text" placeholder="Name" name="name" /><br>
+          <input id="email" class="contact-user" type="text" placeholder="Email" name="email" /><br>
+          <textarea id="message" class="contact-message" placeholder="Message" name="message"></textarea><br>
+          <div class="g-recaptcha"
+               data-sitekey="6LfeSREdAAAAAGO14nqrqWFxEc03lAq47TbrNgL6"
+               data-callback="correctCaptcha"
+               data-expired-callback="expiredCaptcha">
+          </div>
+          <button type="submit" class="submit">Submit</button>
+        </form>
       </div>
     </section>
 
