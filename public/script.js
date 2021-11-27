@@ -1,5 +1,3 @@
-let captchaCorrect = false;
-
 // navElements returns an array nav anchor tags.
 const navElements = document.getElementById("navbar").getElementsByTagName("*");
 
@@ -69,6 +67,8 @@ function checkPagePosition () {
 }
 
 window.onscroll = () => { checkPagePosition(); };
+
+let captchaCorrect = false;
 
 /* eslint-disable-next-line */
 function correctCaptcha (response) {
