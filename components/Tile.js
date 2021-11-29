@@ -7,59 +7,58 @@ const Slide = require("react-reveal/Slide");
 const DOMPurify = require("dompurify");
 const renderHTML = require("react-render-html");
 const styled = require("styled-components");
-
 const tileSelector = require("../util/tileSelector.js");
 
 const styledTag = styled.default;
 const TEN_HOURS = 36000000; // 36 million ms = 10 hours.
 
+const ArrowImg = styledTag.img`
+  position: relative;
+  cursor: pointer;
+  padding: 10px;
+  width: 15%;
+  z-index: 2;
+  visibility: hidden;
+`;
+const ArrowContainer = styledTag.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+`;
+const Container = styledTag.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  background-color: #9daba1;
+  overflow: hidden;
+  margin: 10px;
+  padding: 10px 0px;
+  width: 32%;
+  min-width: 380px;
+  letter-spacing: 0.07em;
+  border-radius: 5px;
+  text-align: center;
+  height: 250px;
+`;
+const Wrapper = styledTag.div`
+  &:hover ${Container} {
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+    margin-top: -10px;
+    transition: box-shadow 0.8s, margin-top 1s;
+  }
+  &:hover ${ArrowImg} {
+    visibility: visible;
+  }
+`;
+
 
 function Tile (props) {
   const [reset, setReset] = React.useState("");
   const id = Number(props.id);
-
-  const ArrowImg = styledTag.img`
-    position: relative;
-    cursor: pointer;
-    padding: 10px;
-    width: 15%;
-    z-index: 2;
-    visibility: hidden;
-  `;
-  const ArrowContainer = styledTag.div`
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-direction: column;
-    height: 100%;
-  `;
-  const Container = styledTag.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
-    background-color: #9daba1;
-    overflow: hidden;
-    margin: 10px;
-    padding: 10px 0px;
-    width: 32%;
-    min-width: 380px;
-    letter-spacing: 0.07em;
-    border-radius: 5px;
-    text-align: center;
-    height: 250px;
-  `;
-  const Wrapper = styledTag.div`
-    &:hover ${Container} {
-      box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
-      margin-top: -10px;
-      transition: box-shadow 0.8s, margin-top 1s;
-    }
-    &:hover ${ArrowImg} {
-      visibility: visible;
-    }
-  `;
 
   const CarouselUI = ({ position, total, handleClick, children }) => (
     <Wrapper>
