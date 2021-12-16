@@ -39,7 +39,7 @@ function tileSelector (id, slide) {
         <p><a href="https://www.edx.org/micromasters/ubcx-software-development" target="_blank">Software Development MicroMasters</a></p>
         <h5>University of British Columbia</h5>
         <h5>500 Hours</h5>
-        <h5>35% Complete</h5>
+        <h5>80% Complete</h5>
         `;
       } else {
         return `
@@ -56,7 +56,7 @@ function tileSelector (id, slide) {
         <p><a href="https://github.com/ossu/computer-science" target="_blank">OSSU CS Undergraduate</a></p>
         <h5>Various Universities</h5>
         <h5>3,000 Hours</h5>
-        <h5>10% Complete</h5>
+        <h5>55% Complete</h5>
         `;
       } else {
         return `
@@ -86,7 +86,7 @@ function tileSelector (id, slide) {
       } else if (slide === 2) {
         return `
         <h5>Onit</h5>
-        <h5>Condo management app programmed using TypeScript. Front end was built with React & Redux while the API was made using the Express framework and managed via the serverless architecture provided by Firebase functions.</h5>
+        <h5>Condo management app programmed using TypeScript. Front end was built with React while the API was made using the Express framework and managed via the serverless architecture provided by Firebase functions.</h5>
         <p>Test out the <a href="https://onit-landing.web.app/" target="_blank">app</a></p>
         `;
       } else {
