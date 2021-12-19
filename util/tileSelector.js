@@ -43,7 +43,7 @@ function tileSelector (id, slide) {
         `;
       } else {
         return `
-        <p>Completed two of six modules with the University of British Columbia via edX. The languages of instruction are Racket, TypeScript and Java.</p>
+        <p>Completed five of six modules with the University of British Columbia via edX. The languages of instruction are Racket, TypeScript and Java.</p>
         <p>The MicroMasters coursework is a subset of the OSSU degree.</p>
         <p><a href="https://trello.com/b/cSR4Hrz8/ossu-computer-science-curriculum-v8" target="_blank">View Progress on Trello</a></p>
         `;
