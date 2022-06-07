@@ -9,7 +9,7 @@
     "set-config": "firebase functions:config:get > .runtimeconfig.json"
   },
   "engines": {
-    "node": "14"
+    "node": "16"
   },
   "main": "index.js",
   "dependencies": {
