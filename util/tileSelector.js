@@ -131,7 +131,7 @@ function tileSelector (id, slide) {
       } else if (slide === 2) {
         return `
         <h5>Put Gang</h5>
-        <h5>MLM affiliate management platform with payment integrations.</h5>
+        <h5>MLM affiliate management platform with payment integrations. Contracted to build this for a client.</h5>
         <p>Test out the <a href="https://put-gang-landing.web.app/" target="_blank">app</a></p>
         `;
       } else {
