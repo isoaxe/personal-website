@@ -48,7 +48,8 @@ const Wrapper = styledTag.div`
   &:hover ${Container} {
     box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
     margin-top: -10px;
-    transition: box-shadow 0.8s, margin-top 1s;
+    margin-bottom: 30px;
+    transition: box-shadow 0.8s, margin-top 1s, margin-bottom 1s;
   }
   &:hover ${ArrowImg} {
     visibility: visible;
