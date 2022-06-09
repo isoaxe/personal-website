@@ -125,6 +125,21 @@ function tileSelector (id, slide) {
         <p>See the <a href="https://github.com/Isoaxe/ravenous" target="_blank">GitHub</a> readme for more detail.</p>
         `;
       }
+    case 8:
+      if (slide === 1) {
+        return "media/put-gang.png";
+      } else if (slide === 2) {
+        return `
+        <h5>Put Gang</h5>
+        <h5>MLM affiliate management platform with payment integrations. Contracted to build this for a client.</h5>
+        <p>Test out the <a href="https://put-gang-landing.web.app/" target="_blank">app</a></p>
+        `;
+      } else {
+        return `
+        <p>The Put Gang platform grants access to an admin console after a subscription payment is made. This in turn gives various permissions such as access to a Discord community and the ability to recruit new members via affiliate links.</p>
+        <p>Check out the <a href="https://youtu.be/Y_z3MsTcLtI" target="_blank">walkthrough</a> for a guide through the platform.</p>
+        `;
+      }
   }
 }
 
