@@ -117,7 +117,7 @@ function tileSelector (id, slide) {
         return `
         <h5>Ravenous</h5>
         <h5>Restaurant finding app built with React and interacting with the Yelp API</h5>
-        <p>After opening the <a href="https://portfolio-ravenous.herokuapp.com/" target="_blank">app</a>, please be patient as the server wakes up.</p>
+        <p>After opening the <a href="https://portfolio-ravenous.web.app" target="_blank">app</a>, please be patient as the server wakes up.</p>
         `;
       } else {
         return `
