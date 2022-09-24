@@ -54,7 +54,7 @@ By default the `production.js` script is loaded. Any changes made to the codebas
 
 *Note:* This requires the setting up of a [Firebase project](https://firebase.google.com/) (hosting and functions), which is not covered here. If you want to host someplace else or simply want to test locally, it's best to use the alternative method below.
 
-*Note:* In order for the contact form to work, a dedicated Gmail account will be required to route queries posted via the form to you and to the sender. When setting up the email account, both [less secure apps](https://myaccount.google.com/lesssecureapps) and [display unlock captcha](https://accounts.google.com/DisplayUnlockCaptcha) need to be enabled for Nodemailer not to be blocked by Google.
+*Note:* In order for the contact form to work, a dedicated Outlook account will be required to route queries posted via the form to you and to the sender.
 
 
 --------------------------------
@@ -95,9 +95,9 @@ Move up to the main directory again and run the `serve` script. This starts both
 
 After the project has been set up, the `dev` script can be run to save time. This executes the `babel`, `watchify` and `serve` scripts simultaneously. It is the only command that needs to be run before developing locally.
 
-### `npm run deploy-all` (hosted only)
+### `npm run deploy` (hosted only)
 
-Deploy both Firebase hosting and Firebase functions from the root directory. In future, these can be deployed separately as required. Run `npm deploy` from this main directory for hosting or the same script from the `functions` directory to deploy functions.
+Deploy both Firebase hosting and Firebase functions from the root directory.
 
 
 --------------------------------
