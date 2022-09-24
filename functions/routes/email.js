@@ -16,6 +16,7 @@ router.post("/submit", async (req, res) => {
 
   const myEmail = {
     to: "lucasoconnell4@gmail.com",
+    from: functions.config().email_router.email,
     subject: `A new message from ${req.body.name}`,
     text: `${req.body.name} sent the following message:
           \n\n ${req.body.message}
@@ -24,6 +25,7 @@ router.post("/submit", async (req, res) => {
 
   const sendersEmail = {
     to: req.body.email,
+    from: functions.config().email_router.email,
     subject: "A copy of your message to Lucas",
     text: `You just sent Lucas the following message:\n\n${req.body.message}`
   };
