@@ -54,7 +54,7 @@ By default the `production.js` script is loaded. Any changes made to the codebas
 
 *Note:* This requires the setting up of a [Firebase project](https://firebase.google.com/) (hosting and functions), which is not covered here. If you want to host someplace else or simply want to test locally, it's best to use the alternative method below.
 
-*Note:* In order for the contact form to work, a dedicated Gmail account will be required to route queries posted via the form to you and to the sender. When setting up the email account, both [less secure apps](https://myaccount.google.com/lesssecureapps) and [display unlock captcha](https://accounts.google.com/DisplayUnlockCaptcha) need to be enabled for Nodemailer not to be blocked by Google.
+*Note:* In order for the contact form to work, a dedicated Outlook account will be required to route queries posted via the form to you and to the sender.
 
 
 --------------------------------
