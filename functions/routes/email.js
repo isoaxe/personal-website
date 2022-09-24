@@ -7,7 +7,7 @@ const router = express.Router();
 router.post("/submit", async (req, res) => {
   // Set Nodemailer configuration, auth and email details.
   const transporter = nodemailer.createTransport({
-    service: "gmail",
+    service: "outlook",
     auth: {
       user: functions.config().email_router.email,
       pass: functions.config().email_router.password
