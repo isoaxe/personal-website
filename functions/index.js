@@ -16,8 +16,6 @@ const app = express();
 // Automatically allow cross-origin requests.
 app.use(cors({ origin: true }));
 
-app.use(bodyParser.urlencoded({ extended: false }));
-
 /* The root directory is the 'functions' folder. This needs to be set to the
    true root (up one level) in order to find the required file (i.e. index.html) */
 app.use("/", express.static(path.join(rootDir, "..")));
