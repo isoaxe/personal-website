@@ -43,8 +43,8 @@ router.post("/submit", async (req, res) => {
 
   // Send message if user is verified as not a bot.
   if (captchaRes.success) {
-    transporter.sendMail(myEmail);
-    transporter.sendMail(sendersEmail);
+    await transporter.sendMail(myEmail);
+    await transporter.sendMail(sendersEmail);
     res.redirect("/#contact");
   } else {
     res.send({ error: "reCaptcha verification failed. Your message was not sent. Please try again." });
