@@ -31,4 +31,4 @@ const secrets = {
  };
 
 // Expose Express API as a single Cloud Function.
-exports.app = functions.https.onRequest(app);
+exports.app = functions.runWith(secrets).https.onRequest(app);
