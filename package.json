@@ -12,7 +12,6 @@
     "watchify": "watchify preprocessed/*.js -o public/development.js",
     "dev": "concurrently 'npm run babel' 'npm run watchify' 'npm run serve'",
     "build": "browserify ./public/development.js -g [ envify --NODE_ENV production ] -g uglifyify | terser --compress --mangle > ./public/production.js",
-    "get-env": "firebase functions:config:get",
     "get-keys": "export GOOGLE_APPLICATION_CREDENTIALS='/Users/lucas/Downloads/personal-website-keys.json'",
     "deploy": "npm run build && firebase deploy"
   },

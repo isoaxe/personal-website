@@ -67,9 +67,9 @@ After setting up the Firebase project, install the Firebase CLI.
 
 You will also need to [login](https://firebase.google.com/docs/cli#sign-in-test-cli) and link this project to the remote, which will be your Google account.
 
-### `firebase functions:config:set email_router.email=EMAIL_ADDRESS email_router.password=EMAIL_PASSWORD`
+### `firebase functions:secrets:set EMAIL_ADDRESS`
 
-[Set](https://firebase.google.com/docs/functions/config-env) the Firebase environment variables for the router email address and password. These are implemented in `email.js` but require configuration first. `EMAIL_ADDRESS` and `EMAIL_PASSWORD` in this script should be replaced with the secret address and password that have previously been created for the email router (see note above).
+Use the Firebase [secret manager](https://firebase.google.com/docs/functions/config-env#secret-manager) to save the email address created for routing form queries (see above) in a secure way. Then enter the value when prompted. Do the same for `EMAIL_PASSWORD`.
 
 ### `npm run get-keys` (local only)
 
@@ -82,10 +82,6 @@ Navigate to the functions folder in a new shell tab to complete configuration of
 ### `npm install`
 
 Install all of the Node dependencies for Express and other third party packages used by Firebase functions.
-
-### `npm run set-config` (local only)
-
-Run the `set-config` script that fetches the previously written environment variables and writes them to the `.runtimeconfig.json` file for local reference.
 
 ### `cd .. && npm run serve` (local only)
 

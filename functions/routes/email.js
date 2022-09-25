@@ -1,22 +1,24 @@
-const functions = require("firebase-functions");
 const nodemailer = require("nodemailer");
 const fetch = require("isomorphic-fetch");
 const express = require("express");
 const router = express.Router();
 
 router.post("/submit", async (req, res) => {
+  const email = process.env.EMAIL_ADDRESS;
+  const password = process.env.EMAIL_PASSWORD;
+
   // Set Nodemailer configuration, auth and email details.
   const transporter = nodemailer.createTransport({
     service: "outlook",
     auth: {
-      user: functions.config().email_router.email,
-      pass: functions.config().email_router.password
+      user: email,
+      pass: password
     }
   });
 
   const myEmail = {
     to: "lucasoconnell4@gmail.com",
-    from: functions.config().email_router.email,
+    from: email,
     subject: `A new message from ${req.body.name}`,
     text: `${req.body.name} sent the following message:
           \n\n ${req.body.message}
@@ -25,7 +27,7 @@ router.post("/submit", async (req, res) => {
 
   const sendersEmail = {
     to: req.body.email,
-    from: functions.config().email_router.email,
+    from: email,
     subject: "A copy of your message to Lucas",
     text: `You just sent Lucas the following message:\n\n${req.body.message}`
   };
@@ -41,8 +43,8 @@ router.post("/submit", async (req, res) => {
 
   // Send message if user is verified as not a bot.
   if (captchaRes.success) {
-    transporter.sendMail(myEmail);
-    transporter.sendMail(sendersEmail);
+    await transporter.sendMail(myEmail);
+    await transporter.sendMail(sendersEmail);
     res.redirect("/#contact");
   } else {
     res.send({ error: "reCaptcha verification failed. Your message was not sent. Please try again." });
