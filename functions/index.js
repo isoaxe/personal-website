@@ -22,5 +22,13 @@ app.use("/", express.static(path.join(rootDir, "..")));
 
 app.use(emailRoute);
 
+// Define secrets available in the app.
+const secrets = {
+   secrets: [
+     "EMAIL_ADDRESS",
+     "EMAIL_PASSWORD",
+   ],
+ };
+
 // Expose Express API as a single Cloud Function.
 exports.app = functions.https.onRequest(app);
