@@ -73,7 +73,7 @@ Use the Firebase [secret manager](https://firebase.google.com/docs/functions/con
 
 ### `npm run get-keys` (local only)
 
-First follow the steps in the Firebase [documentation](https://firebase.google.com/docs/functions/local-emulator#set_up_admin_credentials_optional) to download the private keys from the Service Accounts pane of the Google Cloud console. Then change the [get-keys](https://github.com/Isoaxe/personal-website/blob/master/package.json#L16) script to reflect the local path where the keys are stored and the correct filename of the keys at that location. Finally, run the script.
+First follow the steps in the Firebase [documentation](https://firebase.google.com/docs/functions/local-emulator#set_up_admin_credentials_optional) to download the private keys from the Service Accounts pane of the Google Cloud console. Then change the [get-keys](https://github.com/Isoaxe/personal-website/blob/master/package.json#L15) script to reflect the local path where the keys are stored and the correct filename of the keys at that location. Finally, run the script.
 
 ### `cd functions`
 
