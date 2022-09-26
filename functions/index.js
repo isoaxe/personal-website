@@ -26,6 +26,7 @@ const secrets = {
    secrets: [
      "EMAIL_ADDRESS",
      "EMAIL_PASSWORD",
+     "RECAPTCHA_SECRET",
    ],
  };
 
