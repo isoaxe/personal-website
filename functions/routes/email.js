@@ -34,7 +34,7 @@ router.post("/submit", async (req, res) => {
 
   // Call reCaptcha api to verify user.
   const responseKey = req.body["g-recaptcha-response"];
-  const secretKey = "6LfeSREdAAAAANliAluUdtgpT2V5CkVhGddr5xxQ";
+  const secretKey = process.env.RECAPTCHA_SECRET;
   const baseUrl = "https://www.google.com/recaptcha/api/siteverify";
   const params = `?secret=${secretKey}&response=${responseKey}`;
 
