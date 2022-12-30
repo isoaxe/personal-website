@@ -33,7 +33,8 @@ const Container = styledTag.div`
   align-items: center;
   flex-direction: column;
   position: relative;
-  background-color: #9daba1;
+  background-image: url("media/card-background-1.jpg");
+  background-size: cover;
   overflow: hidden;
   margin: 10px;
   padding: 10px 0px;
