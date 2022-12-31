@@ -33,7 +33,7 @@ const Container = styledTag.div`
   align-items: center;
   flex-direction: column;
   position: relative;
-  background-image: url("media/card-background-1.jpg");
+  background-image: url("media/card-background-${props => props.id < 5 ? 1 : 2}.jpg");
   background-size: cover;
   overflow: hidden;
   margin: 10px;
@@ -64,7 +64,7 @@ function Tile (props) {
 
   const CarouselUI = ({ position, total, handleClick, children }) => (
     <Wrapper>
-      <Container>
+      <Container id={id}>
         {children}
         <ArrowContainer><ArrowImg src='media/down-arrow.png' onClick={handleClick} data-position={position + 1} /></ArrowContainer>
       </Container>
