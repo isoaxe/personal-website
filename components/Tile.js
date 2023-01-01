@@ -44,6 +44,11 @@ const Container = styledTag.div`
   border-radius: 5px;
   text-align: center;
   height: 250px;
+
+  & a {
+    color: #134580;
+    cursor: pointer;
+  }
 `;
 const Wrapper = styledTag.div`
   &:hover ${Container} {
