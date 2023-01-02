@@ -33,7 +33,8 @@ const Container = styledTag.div`
   align-items: center;
   flex-direction: column;
   position: relative;
-  background-color: #9daba1;
+  background-image: url("media/card-background-${props => props.id < 5 ? 1 : 2}.jpg");
+  background-size: cover;
   overflow: hidden;
   margin: 10px;
   padding: 10px 0px;
@@ -43,6 +44,11 @@ const Container = styledTag.div`
   border-radius: 5px;
   text-align: center;
   height: 250px;
+
+  & a {
+    color: #134580;
+    cursor: pointer;
+  }
 `;
 const Wrapper = styledTag.div`
   &:hover ${Container} {
@@ -63,7 +69,7 @@ function Tile (props) {
 
   const CarouselUI = ({ position, total, handleClick, children }) => (
     <Wrapper>
-      <Container>
+      <Container id={id}>
         {children}
         <ArrowContainer><ArrowImg src='media/down-arrow.png' onClick={handleClick} data-position={position + 1} /></ArrowContainer>
       </Container>
