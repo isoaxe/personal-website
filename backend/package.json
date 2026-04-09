@@ -20,7 +20,7 @@
   "homepage": "https://github.com/Isoaxe/personal-website#readme",
   "dependencies": {
     "express": "^4.22.1",
-    "nodemailer": "^8.0.4",
+    "nodemailer": "^8.0.5",
     "nodemon": "^2.0.20"
   }
 }
